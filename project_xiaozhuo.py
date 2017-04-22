@@ -1,11 +1,14 @@
 import nltk
 import numpy as np
 from nltk import word_tokenize, sent_tokenize, FreqDist
+from operator import itemgetter 
 from scipy import stats
-from sklearn.linear_model import BayesianRidge, LogisticRegression
+from sklearn import linear_model
+from sklearn.linear_model import BayesianRidge, Lasso, LogisticRegression
 from sklearn.metrics import make_scorer
 from sklearn.model_selection import cross_val_score
-from sklearn.svm import SVC
+from sklearn.svm import SVC, SVR
+from random import sample
 
 ####################### PART 1 - PREPARATION #######################
 
@@ -76,7 +79,7 @@ def get_frac_freq(input_string):
     vocab_size = len(count_dict)
     freq_count = 0
     for word in count_dict:
-        if count_dict[word] > 5:
+        if count_dict[word] >= 7:
             freq_count += 1
     frac_freq = float(freq_count) / vocab_size
     return frac_freq
@@ -88,7 +91,7 @@ def get_frac_rare(input_string):
     vocab_size = len(count_dict)
     rare_count = 0
     for word in count_dict:
-        if count_dict[word] == 1:
+        if count_dict[word] <= 3:
             rare_count += 1
     frac_rare = float(rare_count) / vocab_size
     return frac_rare
@@ -108,6 +111,12 @@ def get_average_length(input_string):
     return average_length
 
 
+def get_average_sentence_length(input_string):
+	sentence_list = sent_tokenize(input_string)
+	len_list = [len(word_tokenize(sentence)) for sentence in sentence_list]
+	return np.mean(len_list)
+
+
 
 
 if __name__ == "__main__":
@@ -117,18 +126,41 @@ if __name__ == "__main__":
     optional_excerpt_list = load_optional_excerpts("./optional_training/", optional_file_list)
     test_excerpt_list = load_excerpts("project_test.txt")
     
-    feat_vocab_size_train    = [[get_vocab_size(excerpt)] for excerpt in train_excerpt_list]
-    feat_vocab_size_optional = [[get_vocab_size(excerpt)] for excerpt in optional_excerpt_list]
+    feat_vocab_size_train           = [[get_vocab_size(excerpt)]              for excerpt in train_excerpt_list]
+    # feat_vocab_size_optional        = [[get_vocab_size(excerpt)]              for excerpt in optional_excerpt_list]
+    # feat_frac_freq_train            = [[get_frac_freq(excerpt)]               for excerpt in train_excerpt_list]
+    # feat_frac_freq_optional         = [[get_frac_freq(excerpt)]               for excerpt in optional_excerpt_list]
+    # feat_frac_rare_train            = [[get_frac_rare(excerpt)]               for excerpt in train_excerpt_list]
+    # feat_frac_rare_optional         = [[get_frac_rare(excerpt)]               for excerpt in optional_excerpt_list]
+    # feat_median_length_train        = [[get_median_length(excerpt)]           for excerpt in train_excerpt_list]
+    # feat_median_length_optional     = [[get_median_length(excerpt)]           for excerpt in optional_excerpt_list]
+    # feat_average_length_train       = [[get_average_length(excerpt)]          for excerpt in train_excerpt_list]
+    # feat_average_length_optional    = [[get_average_length(excerpt)]          for excerpt in optional_excerpt_list]
+    # feat_average_sentence_train     = [[get_average_sentence_length(excerpt)] for excerpt in train_excerpt_list]
+    # feat_average_sentence_optional  = [[get_average_sentence_length(excerpt)] for excerpt in optional_excerpt_list]
 
 
-    # clf = SVC(C = 5, kernel = 'linear')
+    # reg = SVR(C = 5, kernel = 'linear')
     # clf = LogisticRegression(penalty = 'l1', C = 1, max_iter = 300, solver = 'liblinear', multi_class = 'ovr') 
 
     reg = BayesianRidge()
-    reg.fit(feat_vocab_size_optional, optional_score_list)
-    estimate = reg.predict(feat_vocab_size_train)
+    scores = []
 
-    print compute_spearman_correlation(train_score_list, estimate)
+    total_num = 461
+    train_num = 200
+    for _ in range(10):
+    	train_idx = sample(range(total_num),train_num)
+    	X_train = [feat_vocab_size_train[i] for i in range(total_num) if i in train_idx]
+    	y_train = [train_score_list[i] for i in range(total_num) if i in train_idx]
+    	X_valid = [feat_vocab_size_train[i] for i in range(total_num) if i not in train_idx]
+    	y_valid = [train_score_list[i] for i in range(total_num) if i not in train_idx]
+    	reg.fit(X_train, y_train)
+    	estimate = reg.predict(X_valid)
+    	scores.append(compute_spearman_correlation(y_valid, estimate))
+
+    print "Mean: ", np.mean(scores)
+    print "Max:  ", max(scores)
+    print "Min:  ", min(scores)
 
 
 
