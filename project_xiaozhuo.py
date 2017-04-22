@@ -126,18 +126,12 @@ if __name__ == "__main__":
     optional_excerpt_list = load_optional_excerpts("./optional_training/", optional_file_list)
     test_excerpt_list = load_excerpts("project_test.txt")
     
-    feat_vocab_size_train           = [[get_vocab_size(excerpt)]              for excerpt in train_excerpt_list]
-    # feat_vocab_size_optional        = [[get_vocab_size(excerpt)]              for excerpt in optional_excerpt_list]
-    # feat_frac_freq_train            = [[get_frac_freq(excerpt)]               for excerpt in train_excerpt_list]
-    # feat_frac_freq_optional         = [[get_frac_freq(excerpt)]               for excerpt in optional_excerpt_list]
-    # feat_frac_rare_train            = [[get_frac_rare(excerpt)]               for excerpt in train_excerpt_list]
-    # feat_frac_rare_optional         = [[get_frac_rare(excerpt)]               for excerpt in optional_excerpt_list]
-    # feat_median_length_train        = [[get_median_length(excerpt)]           for excerpt in train_excerpt_list]
-    # feat_median_length_optional     = [[get_median_length(excerpt)]           for excerpt in optional_excerpt_list]
-    # feat_average_length_train       = [[get_average_length(excerpt)]          for excerpt in train_excerpt_list]
-    # feat_average_length_optional    = [[get_average_length(excerpt)]          for excerpt in optional_excerpt_list]
-    # feat_average_sentence_train     = [[get_average_sentence_length(excerpt)] for excerpt in train_excerpt_list]
-    # feat_average_sentence_optional  = [[get_average_sentence_length(excerpt)] for excerpt in optional_excerpt_list]
+    feat_vocab_size_train         = [[get_vocab_size(excerpt)]              for excerpt in train_excerpt_list]
+    feat_frac_freq_train          = [[get_frac_freq(excerpt)]               for excerpt in train_excerpt_list]
+    feat_frac_rare_train          = [[get_frac_rare(excerpt)]               for excerpt in train_excerpt_list]
+    feat_median_length_train      = [[get_median_length(excerpt)]           for excerpt in train_excerpt_list]
+    feat_average_length_train     = [[get_average_length(excerpt)]          for excerpt in train_excerpt_list]
+    feat_average_sentence_train   = [[get_average_sentence_length(excerpt)] for excerpt in train_excerpt_list]
 
 
     # reg = SVR(C = 5, kernel = 'linear')
@@ -147,7 +141,7 @@ if __name__ == "__main__":
     scores = []
 
     total_num = 461
-    train_num = 200
+    train_num = 231
     for _ in range(10):
     	train_idx = sample(range(total_num),train_num)
     	X_train = [feat_vocab_size_train[i] for i in range(total_num) if i in train_idx]
