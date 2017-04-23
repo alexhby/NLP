@@ -473,7 +473,7 @@ def cross_valid_with_spearman(x_train, y_train, cv = 5):
 		reg.fit(x_valid, y_valid)
 		estimate = reg.predict(x_train_sample)
 		scores.append(compute_spearman_correlation(y_train_sample, estimate))
-	return scores
+	return np.array(scores)
 
 
 
@@ -580,9 +580,6 @@ if __name__ == "__main__":
 	# clf = SVC(C = 5, kernel = 'linear')
 	# scores = cross_val_score(clf, X_train, train_score_list, cv = 5)
 
-	x = [range(10)] * 10
-	y = range(10)
-	scores = cross_valid_with_spearman(x, y)
-
+	scores = cross_valid_with_spearman(X_train, train_score_list, 2)
 	# print scores
 	print("Accuracy: %0.3f (+/- %0.3f)" % (scores.mean(), scores.std() * 2))
