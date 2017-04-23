@@ -7,10 +7,13 @@ import xml.etree.ElementTree as ET
 from nltk import word_tokenize, sent_tokenize, FreqDist
 from nltk.util import ngrams
 from os import listdir, system
+from scipy import stats
+from sklearn.linear_model import BayesianRidge, Lasso, LogisticRegression
+from sklearn.metrics import make_scorer
 from sklearn.model_selection import cross_val_score
-from sklearn.svm import SVC
-from sklearn import linear_model, ensemble
-
+from sklearn.svm import SVC, SVR
+from copy import copy
+from random import sample, shuffle
 
 ## return: list of excerpts
 def load_excerpts(file_path):
@@ -416,6 +419,64 @@ def createBigramFeat(doc_dir, top_k_bigrams_list):
 	return np.array(result)
 
 
+
+
+####################### PART 2 - EVALUATION FUNCTION #######################
+def compute_spearman_correlation(ground_truth, predictions):
+    return stats.spearmanr(ground_truth, predictions).correlation
+
+
+####################### cross valid with spearman
+
+## helper: list -> a list of sublists
+def split_list(input_list, cv):
+	rand_list = copy(input_list)
+	shuffle(rand_list)
+	split_list = []
+	length = len(rand_list)
+	sublength = int(math.ceil(float(length)/cv))
+	idx = 0
+	for i in xrange(cv - 1):
+		sublist = []
+		for j in xrange(sublength):
+			sublist.append(rand_list[idx + j])
+		split_list.append(sublist)
+		idx += sublength
+	## append last sublists
+	sublist = []
+	while idx < length:
+		sublist.append(rand_list[idx])
+		idx += 1
+	split_list.append(sublist)
+	return split_list
+
+def cross_valid_with_spearman(x_train, y_train, cv = 5):
+	x_split_list = split_list(x_train, cv)
+	y_split_list = split_list(y_train, cv)
+
+	reg = BayesianRidge()
+	scores = []
+	for i in xrange(cv):
+		x_train_sample = copy(x_split_list)
+		x_valid = x_train_sample[i]
+		del x_train_sample[i]
+		x_train_sample = [item for sublist in x_train_sample for item in sublist]   ## flatten
+
+		y_train_sample = copy(y_split_list)
+		y_valid = y_train_sample[i]
+		del y_train_sample[i]
+		y_train_sample = [item for sublist in y_train_sample for item in sublist]
+
+		reg.fit(x_train_sample, y_train_sample)
+		estimate = reg.predict(x_valid)
+		scores.append(compute_spearman_correlation(y_valid, estimate))
+		reg.fit(x_valid, y_valid)
+		estimate = reg.predict(x_train_sample)
+		scores.append(compute_spearman_correlation(y_train_sample, estimate))
+	return scores
+
+
+
 if __name__ == "__main__":
 	# input_dir = "/home1/c/cis530/project/data/"
 	# output_dir = "/home1/b/boyihe/CIS530/pro/"
@@ -441,37 +502,61 @@ if __name__ == "__main__":
 
 	brown_file_path = hw_path + "brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
 
-	pos_tag_list = extract_pos_tags(train_xml_path)
+	# pos_tag_list = extract_pos_tags(train_xml_path)
 
-	ptb_google_mapping = {}
-	f = open("./en-ptb.map")
-	for line in f:
-		ptb, uni = line.split('\t')
-		ptb_google_mapping[ptb] = uni[:-1]	# remove the ending '\n' from uni tag
-	f.close()
-	universal_tag_list = sorted(list(set(ptb_google_mapping.values())))
+	# ptb_google_mapping = {}
+	# f = open("./en-ptb.map")
+	# for line in f:
+	# 	ptb, uni = line.split('\t')
+	# 	ptb_google_mapping[ptb] = uni[:-1]	# remove the ending '\n' from uni tag
+	# f.close()
+	# universal_tag_list = sorted(list(set(ptb_google_mapping.values())))
 
-	entity_list = extract_ner_tags(train_xml_path)
-	dependency_list = extract_dependencies(train_xml_path)
-	rules_list = extract_prod_rules(train_xml_path)
-	cluster_code_list = generate_cluster_codes(brown_file_path)
-	word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
+	# entity_list = extract_ner_tags(train_xml_path)
+	# dependency_list = extract_dependencies(train_xml_path)
+	# rules_list = extract_prod_rules(train_xml_path)
+	# cluster_code_list = generate_cluster_codes(brown_file_path)
+	# word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
 
-	# get features for train
-	pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
-	uni_feat_train = createUniversalPOSFeat(pos_feat_train, pos_tag_list, ptb_google_mapping, universal_tag_list)
-	ner_feat_train = createNERFeat(train_xml_path, entity_list)
-	dep_feat_train = createDependencyFeat(train_xml_path, dependency_list)
-	syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
-	clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
+	# # get features for train
+	# pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
+	# uni_feat_train = createUniversalPOSFeat(pos_feat_train, pos_tag_list, ptb_google_mapping, universal_tag_list)
+	# ner_feat_train = createNERFeat(train_xml_path, entity_list)
+	# dep_feat_train = createDependencyFeat(train_xml_path, dependency_list)
+	# syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
+	# clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
 
-	# get features for test
+	# # get features for test
 	# pos_feat_test = createPOSFeat(test_xml_path, pos_tag_list)
 	# uni_feat_test = createUniversalPOSFeat(pos_feat_test, pos_tag_list, ptb_google_mapping, universal_tag_list)
 	# ner_feat_test = createNERFeat(test_xml_path, entity_list)
 	# dep_feat_test = createDependencyFeat(test_xml_path, dependency_list)
 	# syn_feat_test = createSyntaticProductionFeat(test_xml_path, rules_list)
 	# clu_feat_test = createBrownClusterFeat(test_xml_path, cluster_code_list, word_cluster_mapping)
+
+
+	npy_folder = hw_path + "npy_files/"
+	## serilize
+	# np.save(npy_folder + "pos_train", pos_feat_train)
+	# np.save(npy_folder + "pos_test", pos_feat_test)
+	# np.save(npy_folder + "uni_train", uni_feat_train)
+	# np.save(npy_folder + "uni_test", uni_feat_test)
+	# np.save(npy_folder + "ner_train", ner_feat_train)
+	# np.save(npy_folder + "ner_test", ner_feat_test)
+	# np.save(npy_folder + "dep_train", dep_feat_train)
+	# np.save(npy_folder + "dep_test", dep_feat_test)
+	# np.save(npy_folder + "syn_train", syn_feat_train)
+	# np.save(npy_folder + "syn_test", syn_feat_test)
+	# np.save(npy_folder + "clu_train", clu_feat_train)
+	# np.save(npy_folder + "clu_test", clu_feat_test)
+
+	## deserialize
+	# pos_feat_train = np.load(npy_folder + "pos_train.npy")
+	# uni_feat_train = np.load(npy_folder + "uni_train.npy")
+	ner_feat_train = np.load(npy_folder + "ner_train.npy")
+	# dep_feat_train = np.load(npy_folder + "dep_train.npy")
+	# syn_feat_train = np.load(npy_folder + "syn_train.npy")
+	# clu_feat_train = np.load(npy_folder + "clu_train.npy")
 
 	# X_train = np.concatenate(
  #        (pos_feat_train, uni_feat_train, ner_feat_train, dep_feat_train, syn_feat_train, clu_feat_train), axis = 1)
@@ -480,21 +565,9 @@ if __name__ == "__main__":
 
 	X_train = ner_feat_train
 
-	train_file_list = sorted(listdir(train_xml_path), key = lambda x : int(x.split('.')[0].split('_')[-1]))
+	# train_file_list = sorted(listdir(train_xml_path), key = lambda x : int(x.split('.')[0].split('_')[-1]))
 
-	## serilize
-	# np.save("./hw3_npy/pos_train", pos_feat_train)
-	# np.save("./hw3_npy/pos_test", pos_feat_test)
-	# np.save("./hw3_npy/uni_train", uni_feat_train)
-	# np.save("./hw3_npy/uni_test", uni_feat_test)
-	# np.save("./hw3_npy/ner_train", ner_feat_train)
-	# np.save("./hw3_npy/ner_test", ner_feat_test)
-	# np.save("./hw3_npy/dep_train", dep_feat_train)
-	# np.save("./hw3_npy/dep_test", dep_feat_test)
-	# np.save("./hw3_npy/syn_train", syn_feat_train)
-	# np.save("./hw3_npy/syn_test", syn_feat_test)
-	# np.save("./hw3_npy/clu_train", clu_feat_train)
-	# np.save("./hw3_npy/clu_test", clu_feat_test)
+
 
 	############# unigram & bigram (hw3)
 	# top_k_unigrams_list = extract_top_k_unigrams(train_path, 5000)
@@ -504,13 +577,12 @@ if __name__ == "__main__":
 
 	## cross validate
 	# clf = linear_model.LogisticRegression(penalty = 'l1', C = 100, max_iter = 300, solver = 'liblinear', multi_class = 'ovr')
-	clf = SVC(C = 5, kernel = 'linear')
-	scores = cross_val_score(clf, X_train, train_score_list, cv = 5)
+	# clf = SVC(C = 5, kernel = 'linear')
+	# scores = cross_val_score(clf, X_train, train_score_list, cv = 5)
 
-	# # print scores
+	x = [range(10)] * 10
+	y = range(10)
+	scores = cross_valid_with_spearman(x, y)
+
+	# print scores
 	print("Accuracy: %0.3f (+/- %0.3f)" % (scores.mean(), scores.std() * 2))
-
-
-
-
-
