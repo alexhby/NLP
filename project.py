@@ -12,7 +12,7 @@ from sklearn.linear_model import BayesianRidge, Lasso, LogisticRegression
 from sklearn.metrics import make_scorer
 from sklearn.model_selection import cross_val_score
 from sklearn.svm import SVC, SVR
-from copy import copy
+from copy import copy, deepcopy
 from random import sample, shuffle
 
 ## return: list of excerpts
@@ -430,7 +430,7 @@ def compute_spearman_correlation(ground_truth, predictions):
 
 ## helper: list -> a list of sublists
 def split_list(input_list, cv):
-	rand_list = copy(input_list)
+	rand_list = deepcopy(input_list)
 	shuffle(rand_list)
 	split_list = []
 	length = len(rand_list)
@@ -457,12 +457,12 @@ def cross_valid_with_spearman(x_train, y_train, cv = 5):
 	reg = BayesianRidge()
 	scores = []
 	for i in xrange(cv):
-		x_train_sample = copy(x_split_list)
+		x_train_sample = deepcopy(x_split_list)
 		x_valid = x_train_sample[i]
 		del x_train_sample[i]
 		x_train_sample = [item for sublist in x_train_sample for item in sublist]   ## flatten
 
-		y_train_sample = copy(y_split_list)
+		y_train_sample = deepcopy(y_split_list)
 		y_valid = y_train_sample[i]
 		del y_train_sample[i]
 		y_train_sample = [item for sublist in y_train_sample for item in sublist]
@@ -470,9 +470,6 @@ def cross_valid_with_spearman(x_train, y_train, cv = 5):
 		reg.fit(x_train_sample, y_train_sample)
 		estimate = reg.predict(x_valid)
 		scores.append(compute_spearman_correlation(y_valid, estimate))
-		reg.fit(x_valid, y_valid)
-		estimate = reg.predict(x_train_sample)
-		scores.append(compute_spearman_correlation(y_train_sample, estimate))
 	return np.array(scores)
 
 
@@ -551,19 +548,19 @@ if __name__ == "__main__":
 	# np.save(npy_folder + "clu_test", clu_feat_test)
 
 	## deserialize
-	# pos_feat_train = np.load(npy_folder + "pos_train.npy")
-	# uni_feat_train = np.load(npy_folder + "uni_train.npy")
+	pos_feat_train = np.load(npy_folder + "pos_train.npy")
+	uni_feat_train = np.load(npy_folder + "uni_train.npy")
 	ner_feat_train = np.load(npy_folder + "ner_train.npy")
-	# dep_feat_train = np.load(npy_folder + "dep_train.npy")
-	# syn_feat_train = np.load(npy_folder + "syn_train.npy")
-	# clu_feat_train = np.load(npy_folder + "clu_train.npy")
+	dep_feat_train = np.load(npy_folder + "dep_train.npy")
+	syn_feat_train = np.load(npy_folder + "syn_train.npy")
+	clu_feat_train = np.load(npy_folder + "clu_train.npy")
 
-	# X_train = np.concatenate(
- #        (pos_feat_train, uni_feat_train, ner_feat_train, dep_feat_train, syn_feat_train, clu_feat_train), axis = 1)
+	X_train = np.concatenate(
+        (pos_feat_train, uni_feat_train, ner_feat_train, dep_feat_train, syn_feat_train, clu_feat_train), axis = 1)
 	# X_test = np.concatenate(
  #        (pos_feat_test, uni_feat_test, ner_feat_test, dep_feat_test, syn_feat_test, clu_feat_test), axis = 1)
 
-	X_train = ner_feat_train
+	# X_train = ner_feat_train
 
 	# train_file_list = sorted(listdir(train_xml_path), key = lambda x : int(x.split('.')[0].split('_')[-1]))
 
@@ -580,6 +577,6 @@ if __name__ == "__main__":
 	# clf = SVC(C = 5, kernel = 'linear')
 	# scores = cross_val_score(clf, X_train, train_score_list, cv = 5)
 
-	scores = cross_valid_with_spearman(X_train, train_score_list, 2)
+	scores = cross_valid_with_spearman(X_train, train_score_list, 3)
 	# print scores
 	print("Accuracy: %0.3f (+/- %0.3f)" % (scores.mean(), scores.std() * 2))
