@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Herpesvirus-like</word>
+            <lemma>herpesvirus-like</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>particles</word>
+            <lemma>particle</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>skin</word>
+            <lemma>skin</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>saltwater</word>
+            <lemma>saltwater</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>crocodile</word>
+            <lemma>crocodile</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>64</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>Crocodylus</word>
+            <lemma>crocodylus</lemma>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>MISC</NER>
+          </token>
+          <token id="12">
+            <word>porosus</word>
+            <lemma>porosus</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>83</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>84</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Herpesvirus-like) (NNS particles)) (PP (IN in) (NP (DT the) (NN skin))) (PP (IN of) (NP (NP (DT a) (NN saltwater) (NN crocodile)) (PRN (-LRB- -LRB-) (NP (NN Crocodylus) (NN porosus)) (-RRB- -RRB-)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">particles</governor>
+            <dependent idx="1">Herpesvirus-like</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">particles</governor>
+            <dependent idx="3">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">skin</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">in</governor>
+            <dependent idx="5">skin</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">particles</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="7">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="8">saltwater</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="9">crocodile</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">porosus</governor>
+            <dependent idx="11">Crocodylus</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="12">porosus</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">particles</governor>
+            <dependent idx="1">Herpesvirus-like</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">skin</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">particles</governor>
+            <dependent idx="5">skin</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="7">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="8">saltwater</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">particles</governor>
+            <dependent idx="9">crocodile</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">porosus</governor>
+            <dependent idx="11">Crocodylus</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="12">porosus</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">particles</governor>
+            <dependent idx="1">Herpesvirus-like</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">skin</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">particles</governor>
+            <dependent idx="5">skin</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="7">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="8">saltwater</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">particles</governor>
+            <dependent idx="9">crocodile</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="12">porosus</governor>
+            <dependent idx="11">Crocodylus</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="9">crocodile</governor>
+            <dependent idx="12">porosus</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

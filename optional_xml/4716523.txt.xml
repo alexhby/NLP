@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Truncal</word>
+            <lemma>truncal</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>vagotomy</word>
+            <lemma>vagotomy</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>20</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>drainage</word>
+            <lemma>drainage</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>duodenal</word>
+            <lemma>duodenal</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>42</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>ulcer</word>
+            <lemma>ulcer</lemma>
+            <CharacterOffsetBegin>43</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Truncal) (NN vagotomy) (CC and) (NN drainage)) (PP (IN for) (NP (JJ duodenal) (NN ulcer))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="1">Truncal</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="3">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="4">drainage</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="5">for</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">ulcer</governor>
+            <dependent idx="6">duodenal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">for</governor>
+            <dependent idx="7">ulcer</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="1">Truncal</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="4">drainage</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">ulcer</governor>
+            <dependent idx="6">duodenal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="7">ulcer</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="1">Truncal</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="4">drainage</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">ulcer</governor>
+            <dependent idx="6">duodenal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="2">vagotomy</governor>
+            <dependent idx="7">ulcer</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

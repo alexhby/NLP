@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Peptide</word>
+            <lemma>peptide</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>T</word>
+            <lemma>t</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>negative</word>
+            <lemma>negative</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>trial</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>result</word>
+            <lemma>result</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>32</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Peptide) (NN T)) (: :) (NP (JJ negative) (NN trial) (NN result)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">T</governor>
+            <dependent idx="1">Peptide</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">result</governor>
+            <dependent idx="4">negative</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">result</governor>
+            <dependent idx="5">trial</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">T</governor>
+            <dependent idx="6">result</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">T</governor>
+            <dependent idx="1">Peptide</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">result</governor>
+            <dependent idx="4">negative</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">result</governor>
+            <dependent idx="5">trial</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">T</governor>
+            <dependent idx="6">result</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">T</governor>
+            <dependent idx="1">Peptide</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">result</governor>
+            <dependent idx="4">negative</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">result</governor>
+            <dependent idx="5">trial</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">T</governor>
+            <dependent idx="6">result</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

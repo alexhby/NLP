@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Behavioral\/psychoeducational</word>
+            <lemma>behavioral\/psychoeducational</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>group</word>
+            <lemma>group</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>training</word>
+            <lemma>training</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>therapy</word>
+            <lemma>therapy</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>overtaxed</word>
+            <lemma>overtax</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>men</word>
+            <lemma>man</lemma>
+            <CharacterOffsetBegin>69</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>72</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Behavioral\/psychoeducational) (NN group) (NN training)) (PP (IN in) (NP (NP (NN therapy)) (PP (IN for) (NP (VBN overtaxed) (NNS men))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">training</governor>
+            <dependent idx="1">Behavioral\/psychoeducational</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">training</governor>
+            <dependent idx="2">group</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">training</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="5">therapy</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">therapy</governor>
+            <dependent idx="6">for</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">men</governor>
+            <dependent idx="7">overtaxed</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">for</governor>
+            <dependent idx="8">men</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">training</governor>
+            <dependent idx="1">Behavioral\/psychoeducational</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">training</governor>
+            <dependent idx="2">group</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">training</governor>
+            <dependent idx="5">therapy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">men</governor>
+            <dependent idx="7">overtaxed</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">therapy</governor>
+            <dependent idx="8">men</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">training</governor>
+            <dependent idx="1">Behavioral\/psychoeducational</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">training</governor>
+            <dependent idx="2">group</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">training</governor>
+            <dependent idx="5">therapy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">men</governor>
+            <dependent idx="7">overtaxed</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">therapy</governor>
+            <dependent idx="8">men</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

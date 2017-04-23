@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Beta-cytotrophic</word>
+            <lemma>beta-cytotrophic</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>effects</word>
+            <lemma>effect</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>glucose</word>
+            <lemma>glucose</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>glucagon</word>
+            <lemma>glucagon</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>tolbutamide</word>
+            <lemma>tolbutamide</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>man</word>
+            <lemma>man</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>69</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Beta-cytotrophic) (NNS effects)) (PP (IN of) (NP (NP (NN glucose) (, ,) (NN glucagon) (, ,) (CC and) (NN tolbutamide)) (PP (IN in) (NP (NN man))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">Beta-cytotrophic</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="3">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">of</governor>
+            <dependent idx="4">glucose</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">glucose</governor>
+            <dependent idx="6">glucagon</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">glucose</governor>
+            <dependent idx="8">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">glucose</governor>
+            <dependent idx="9">tolbutamide</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">glucose</governor>
+            <dependent idx="10">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">in</governor>
+            <dependent idx="11">man</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">Beta-cytotrophic</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="4">glucose</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">glucose</governor>
+            <dependent idx="6">glucagon</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">glucose</governor>
+            <dependent idx="9">tolbutamide</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">glucose</governor>
+            <dependent idx="11">man</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">Beta-cytotrophic</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="4">glucose</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="6">glucagon</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">glucose</governor>
+            <dependent idx="6">glucagon</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="9">tolbutamide</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">glucose</governor>
+            <dependent idx="9">tolbutamide</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">glucose</governor>
+            <dependent idx="11">man</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>High</word>
+            <lemma>high</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>general</word>
+            <lemma>general</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>anger</word>
+            <lemma>anger</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>correlates</word>
+            <lemma>correlate</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (JJ High) (JJ general) (NN anger)) (: :) (VP (VP (VBZ correlates)) (CC and) (VP (NP (NN treatment)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="1">High</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="2">general</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">correlates</governor>
+            <dependent idx="3">anger</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">correlates</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">correlates</governor>
+            <dependent idx="7">treatment</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="1">High</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="2">general</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">correlates</governor>
+            <dependent idx="3">anger</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">correlates</governor>
+            <dependent idx="7">treatment</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="1">High</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">anger</governor>
+            <dependent idx="2">general</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">correlates</governor>
+            <dependent idx="3">anger</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">correlates</governor>
+            <dependent idx="7">treatment</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

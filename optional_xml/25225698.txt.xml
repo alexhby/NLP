@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Methylprednisolone</word>
+            <lemma>methylprednisolone</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>cancer</word>
+            <lemma>cancer</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>42</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>using</word>
+            <lemma>use</lemma>
+            <CharacterOffsetBegin>43</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>opioids</word>
+            <lemma>opioid</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (NN Methylprednisolone)) (PP (IN in) (NP (NP (NNS patients)) (PP (IN with) (NP (NN cancer)))))) (VP (VBG using) (NP (NNS opioids))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="2">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">in</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">patients</governor>
+            <dependent idx="4">with</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">with</governor>
+            <dependent idx="5">cancer</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="6">using</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">using</governor>
+            <dependent idx="7">opioids</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="prep_in">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="3">patients</governor>
+            <dependent idx="5">cancer</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="6">using</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">using</governor>
+            <dependent idx="7">opioids</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="prep_in">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="3">patients</governor>
+            <dependent idx="5">cancer</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="1">Methylprednisolone</governor>
+            <dependent idx="6">using</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">using</governor>
+            <dependent idx="7">opioids</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

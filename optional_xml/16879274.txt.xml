@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Nuclear</word>
+            <lemma>nuclear</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>fragments</word>
+            <lemma>fragment</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>holes</word>
+            <lemma>hole</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>grading</word>
+            <lemma>grading</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>breast</word>
+            <lemma>breast</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>cancer</word>
+            <lemma>cancer</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>aspirates</word>
+            <lemma>aspirate</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Nuclear) (NNS fragments) (CC and) (NNS holes)) (PP (IN in) (NP (NN grading))) (PP (IN of) (NP (NN breast) (NN cancer) (NNS aspirates))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">fragments</governor>
+            <dependent idx="1">Nuclear</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="2">fragments</governor>
+            <dependent idx="3">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="2">fragments</governor>
+            <dependent idx="4">holes</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">fragments</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">in</governor>
+            <dependent idx="6">grading</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">fragments</governor>
+            <dependent idx="7">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">of</governor>
+            <dependent idx="10">aspirates</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">fragments</governor>
+            <dependent idx="1">Nuclear</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">fragments</governor>
+            <dependent idx="4">holes</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">fragments</governor>
+            <dependent idx="6">grading</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">fragments</governor>
+            <dependent idx="10">aspirates</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">fragments</governor>
+            <dependent idx="1">Nuclear</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">fragments</governor>
+            <dependent idx="4">holes</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">fragments</governor>
+            <dependent idx="6">grading</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">aspirates</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">fragments</governor>
+            <dependent idx="10">aspirates</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

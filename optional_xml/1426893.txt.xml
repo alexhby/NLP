@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Interferon</word>
+            <lemma>interferon</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>alfa</word>
+            <lemma>alfa</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>acute</word>
+            <lemma>acute</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>posttransfusion</word>
+            <lemma>posttransfusion</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>hepatitis</word>
+            <lemma>hepatitis</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>C</word>
+            <lemma>c</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>randomized</word>
+            <lemma>randomize</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>controlled</word>
+            <lemma>control</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>78</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>trial</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>79</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>84</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (NN Interferon) (NN alfa)) (PP (IN in) (NP (JJ acute) (NN posttransfusion) (NN hepatitis) (NN C)))) (: :) (NP (NP (DT a)) (VP (VBN randomized) (, ,) (VBN controlled) (NP (NN trial)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">alfa</governor>
+            <dependent idx="1">Interferon</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">alfa</governor>
+            <dependent idx="3">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">C</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="5">posttransfusion</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="6">hepatitis</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">in</governor>
+            <dependent idx="7">C</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">alfa</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="9">a</governor>
+            <dependent idx="10">randomized</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">randomized</governor>
+            <dependent idx="12">controlled</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">randomized</governor>
+            <dependent idx="13">trial</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">alfa</governor>
+            <dependent idx="1">Interferon</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">C</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="5">posttransfusion</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="6">hepatitis</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">alfa</governor>
+            <dependent idx="7">C</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">alfa</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="9">a</governor>
+            <dependent idx="10">randomized</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">randomized</governor>
+            <dependent idx="12">controlled</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">randomized</governor>
+            <dependent idx="13">trial</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">alfa</governor>
+            <dependent idx="1">Interferon</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">C</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="5">posttransfusion</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">C</governor>
+            <dependent idx="6">hepatitis</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">alfa</governor>
+            <dependent idx="7">C</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">alfa</governor>
+            <dependent idx="9">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="9">a</governor>
+            <dependent idx="10">randomized</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="10">randomized</governor>
+            <dependent idx="12">controlled</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="10">randomized</governor>
+            <dependent idx="13">trial</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Primary</word>
+            <lemma>primary</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>hypothyroidism</word>
+            <lemma>hypothyroidism</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>associated</word>
+            <lemma>associate</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>interferon</word>
+            <lemma>interferon</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>therapy</word>
+            <lemma>therapy</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>58</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>breast</word>
+            <lemma>breast</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>cancer</word>
+            <lemma>cancer</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>74</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (JJ Primary) (NN hypothyroidism)) (VP (VBN associated) (PP (IN with) (NP (NP (NN interferon) (NN therapy)) (PP (IN of) (NP (NN breast) (NN cancer)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">hypothyroidism</governor>
+            <dependent idx="1">Primary</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">associated</governor>
+            <dependent idx="2">hypothyroidism</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">associated</governor>
+            <dependent idx="4">with</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">therapy</governor>
+            <dependent idx="5">interferon</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">with</governor>
+            <dependent idx="6">therapy</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">therapy</governor>
+            <dependent idx="7">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">cancer</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">of</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">hypothyroidism</governor>
+            <dependent idx="1">Primary</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">associated</governor>
+            <dependent idx="2">hypothyroidism</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">therapy</governor>
+            <dependent idx="5">interferon</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="3">associated</governor>
+            <dependent idx="6">therapy</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">cancer</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">therapy</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">hypothyroidism</governor>
+            <dependent idx="1">Primary</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">associated</governor>
+            <dependent idx="2">hypothyroidism</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">therapy</governor>
+            <dependent idx="5">interferon</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="3">associated</governor>
+            <dependent idx="6">therapy</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">cancer</governor>
+            <dependent idx="8">breast</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">therapy</governor>
+            <dependent idx="9">cancer</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

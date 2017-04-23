@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Galantamine</word>
+            <lemma>galantamine</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>may</word>
+            <lemma>may</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>MD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>be</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>effective</word>
+            <lemma>effective</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>31</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>treating</word>
+            <lemma>treat</lemma>
+            <CharacterOffsetBegin>32</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>autistic</word>
+            <lemma>autistic</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>disorder</word>
+            <lemma>disorder</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>58</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NN Galantamine)) (VP (MD may) (VP (VB be) (ADJP (JJ effective) (PP (IN in) (S (VP (VBG treating) (NP (JJ autistic) (NN disorder)))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="4">effective</governor>
+            <dependent idx="1">Galantamine</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">effective</governor>
+            <dependent idx="2">may</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="4">effective</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">effective</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="5">in</governor>
+            <dependent idx="6">treating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">disorder</governor>
+            <dependent idx="7">autistic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">treating</governor>
+            <dependent idx="8">disorder</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="4">effective</governor>
+            <dependent idx="1">Galantamine</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">effective</governor>
+            <dependent idx="2">may</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="4">effective</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="prepc_in">
+            <governor idx="4">effective</governor>
+            <dependent idx="6">treating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">disorder</governor>
+            <dependent idx="7">autistic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">treating</governor>
+            <dependent idx="8">disorder</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="4">effective</governor>
+            <dependent idx="1">Galantamine</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="4">effective</governor>
+            <dependent idx="2">may</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="4">effective</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="prepc_in">
+            <governor idx="4">effective</governor>
+            <dependent idx="6">treating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">disorder</governor>
+            <dependent idx="7">autistic</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="6">treating</governor>
+            <dependent idx="8">disorder</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Recombinant</word>
+            <lemma>recombinant</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>human</word>
+            <lemma>human</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>erythropoietin</word>
+            <lemma>erythropoietin</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>32</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (FRAG (NP (JJ Recombinant) (JJ human) (NN erythropoietin)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="1">Recombinant</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="2">human</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="1">Recombinant</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="2">human</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="1">Recombinant</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">erythropoietin</governor>
+            <dependent idx="2">human</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

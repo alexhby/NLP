@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Randomized</word>
+            <lemma>randomize</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>trial</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>Sandostatin</word>
+            <lemma>sandostatin</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>31</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>LOCATION</NER>
+          </token>
+          <token id="5">
+            <word>prophylaxis</word>
+            <lemma>prophylaxis</lemma>
+            <CharacterOffsetBegin>32</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>preservation</word>
+            <lemma>preservation</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>injury</word>
+            <lemma>injury</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>pancreas</word>
+            <lemma>pancreas</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>transplantation</word>
+            <lemma>transplantation</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>98</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>98</CharacterOffsetBegin>
+            <CharacterOffsetEnd>99</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (VP (VBN Randomized) (NP (NP (NN trial)) (PP (IN of) (NP (NP (NN Sandostatin) (NN prophylaxis)) (PP (IN for) (NP (NN preservation) (NN injury)))))) (PP (IN after) (NP (NN pancreas) (NN transplantation)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="dobj">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="2">trial</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">trial</governor>
+            <dependent idx="3">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">Sandostatin</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">of</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="6">for</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">injury</governor>
+            <dependent idx="7">preservation</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">for</governor>
+            <dependent idx="8">injury</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="9">after</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">transplantation</governor>
+            <dependent idx="10">pancreas</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">after</governor>
+            <dependent idx="11">transplantation</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="dobj">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="2">trial</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">Sandostatin</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">trial</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">injury</governor>
+            <dependent idx="7">preservation</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="8">injury</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">transplantation</governor>
+            <dependent idx="10">pancreas</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="11">transplantation</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="dobj">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="2">trial</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">Sandostatin</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">trial</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="8">injury</governor>
+            <dependent idx="7">preservation</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="8">injury</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">transplantation</governor>
+            <dependent idx="10">pancreas</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="1">Randomized</governor>
+            <dependent idx="11">transplantation</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

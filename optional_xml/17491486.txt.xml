@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>periodontal</word>
+            <lemma>periodontal</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>disease</word>
+            <lemma>disease</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>risk</word>
+            <lemma>risk</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>preterm</word>
+            <lemma>preterm</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>birth</word>
+            <lemma>birth</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Treatment)) (PP (IN of) (NP (NP (JJ periodontal) (NN disease)) (CC and) (NP (DT the) (NN risk)))) (PP (IN of) (NP (JJ preterm) (NN birth))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">disease</governor>
+            <dependent idx="3">periodontal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="4">disease</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">disease</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">risk</governor>
+            <dependent idx="6">the</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">disease</governor>
+            <dependent idx="7">risk</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="8">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">birth</governor>
+            <dependent idx="9">preterm</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">of</governor>
+            <dependent idx="10">birth</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="4">disease</governor>
+            <dependent idx="3">periodontal</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="4">disease</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">risk</governor>
+            <dependent idx="6">the</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">disease</governor>
+            <dependent idx="7">risk</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">birth</governor>
+            <dependent idx="9">preterm</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="10">birth</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="4">disease</governor>
+            <dependent idx="3">periodontal</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="4">disease</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="7">risk</governor>
+            <dependent idx="6">the</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="7">risk</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">disease</governor>
+            <dependent idx="7">risk</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">birth</governor>
+            <dependent idx="9">preterm</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Treatment</governor>
+            <dependent idx="10">birth</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

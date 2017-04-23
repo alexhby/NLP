@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Pouch</word>
+            <lemma>pouch</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>5</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>versus</word>
+            <lemma>versus</lemma>
+            <CharacterOffsetBegin>6</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>esophagojejunostomy</word>
+            <lemma>esophagojejunostomy</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>total</word>
+            <lemma>total</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>gastrectomy</word>
+            <lemma>gastrectomy</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>58</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>randomized</word>
+            <lemma>randomize</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>clinical</word>
+            <lemma>clinical</lemma>
+            <CharacterOffsetBegin>71</CharacterOffsetBegin>
+            <CharacterOffsetEnd>79</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>trial</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>80</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>85</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (NN Pouch)) (PP (CC versus) (NP (NP (NN esophagojejunostomy)) (PP (IN after) (NP (JJ total) (NN gastrectomy)))))) (: :) (NP (NP (DT a)) (VP (VBN randomized) (NP (JJ clinical) (NN trial)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="2">versus</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">versus</governor>
+            <dependent idx="3">esophagojejunostomy</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">esophagojejunostomy</governor>
+            <dependent idx="4">after</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">gastrectomy</governor>
+            <dependent idx="5">total</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">after</governor>
+            <dependent idx="6">gastrectomy</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="8">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="8">a</governor>
+            <dependent idx="9">randomized</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">trial</governor>
+            <dependent idx="10">clinical</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">randomized</governor>
+            <dependent idx="11">trial</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="prep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="2">versus</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">versus</governor>
+            <dependent idx="3">esophagojejunostomy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">gastrectomy</governor>
+            <dependent idx="5">total</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="3">esophagojejunostomy</governor>
+            <dependent idx="6">gastrectomy</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="8">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="8">a</governor>
+            <dependent idx="9">randomized</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">trial</governor>
+            <dependent idx="10">clinical</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">randomized</governor>
+            <dependent idx="11">trial</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="prep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="2">versus</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">versus</governor>
+            <dependent idx="3">esophagojejunostomy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">gastrectomy</governor>
+            <dependent idx="5">total</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="3">esophagojejunostomy</governor>
+            <dependent idx="6">gastrectomy</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pouch</governor>
+            <dependent idx="8">a</dependent>
+          </dep>
+          <dep type="partmod">
+            <governor idx="8">a</governor>
+            <dependent idx="9">randomized</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">trial</governor>
+            <dependent idx="10">clinical</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">randomized</governor>
+            <dependent idx="11">trial</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

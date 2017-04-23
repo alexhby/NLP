@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Should</word>
+            <lemma>should</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>MD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>we</word>
+            <lemma>we</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>PRP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>debrief</word>
+            <lemma>debrief</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>counsel</word>
+            <lemma>counsel</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>people</word>
+            <lemma>people</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>who</word>
+            <lemma>who</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>WP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>have</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>had</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>psychological</word>
+            <lemma>psychological</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>shock</word>
+            <lemma>shock</lemma>
+            <CharacterOffsetBegin>64</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>?</word>
+            <lemma>?</lemma>
+            <CharacterOffsetBegin>69</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (SQ (MD Should) (NP (PRP we)) (VP (VP (VB debrief)) (CC and) (VP (NP (NN counsel) (NNS people)) (SBAR (WHNP (WP who)) (S (VP (VBP have) (VP (VBN had) (NP (JJ psychological) (NN shock)))))))) (. ?))) </parse>
+        <basic-dependencies>
+          <dep type="aux">
+            <governor idx="3">debrief</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">debrief</governor>
+            <dependent idx="2">we</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="3">debrief</governor>
+            <dependent idx="4">and</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">people</governor>
+            <dependent idx="5">counsel</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="3">debrief</governor>
+            <dependent idx="6">people</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">had</governor>
+            <dependent idx="7">who</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="9">had</governor>
+            <dependent idx="8">have</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">people</governor>
+            <dependent idx="9">had</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">shock</governor>
+            <dependent idx="10">psychological</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">had</governor>
+            <dependent idx="11">shock</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="aux">
+            <governor idx="3">debrief</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">debrief</governor>
+            <dependent idx="2">we</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">people</governor>
+            <dependent idx="5">counsel</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">debrief</governor>
+            <dependent idx="6">people</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">had</governor>
+            <dependent idx="7">who</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="9">had</governor>
+            <dependent idx="8">have</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">people</governor>
+            <dependent idx="9">had</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">shock</governor>
+            <dependent idx="10">psychological</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">had</governor>
+            <dependent idx="11">shock</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="aux">
+            <governor idx="3">debrief</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">debrief</governor>
+            <dependent idx="2">we</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">people</governor>
+            <dependent idx="5">counsel</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">debrief</governor>
+            <dependent idx="6">people</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">had</governor>
+            <dependent idx="7">who</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="9">had</governor>
+            <dependent idx="8">have</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="6">people</governor>
+            <dependent idx="9">had</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">shock</governor>
+            <dependent idx="10">psychological</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="9">had</governor>
+            <dependent idx="11">shock</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

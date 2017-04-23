@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Role</word>
+            <lemma>role</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>placebo</word>
+            <lemma>placebo</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>effect</word>
+            <lemma>effect</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>evaluating</word>
+            <lemma>evaluate</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>antidepressant</word>
+            <lemma>antidepressant</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>efficacy</word>
+            <lemma>efficacy</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>64</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Role)) (PP (IN of) (NP (NP (DT the) (NN placebo) (NN effect)) (PP (IN in) (S (VP (VBG evaluating) (NP (JJ antidepressant) (NN efficacy))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Role</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">effect</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">effect</governor>
+            <dependent idx="4">placebo</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="5">effect</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">effect</governor>
+            <dependent idx="6">in</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="6">in</governor>
+            <dependent idx="7">evaluating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">efficacy</governor>
+            <dependent idx="8">antidepressant</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">evaluating</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="5">effect</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">effect</governor>
+            <dependent idx="4">placebo</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Role</governor>
+            <dependent idx="5">effect</dependent>
+          </dep>
+          <dep type="prepc_in">
+            <governor idx="5">effect</governor>
+            <dependent idx="7">evaluating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">efficacy</governor>
+            <dependent idx="8">antidepressant</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">evaluating</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="5">effect</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">effect</governor>
+            <dependent idx="4">placebo</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Role</governor>
+            <dependent idx="5">effect</dependent>
+          </dep>
+          <dep type="prepc_in">
+            <governor idx="5">effect</governor>
+            <dependent idx="7">evaluating</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">efficacy</governor>
+            <dependent idx="8">antidepressant</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">evaluating</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

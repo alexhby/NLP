@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>``</word>
+            <lemma>``</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>``</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>Confirmatory</word>
+            <lemma>confirmatory</lemma>
+            <CharacterOffsetBegin>1</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>''</word>
+            <lemma>''</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>14</CharacterOffsetEnd>
+            <POS>''</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>trials</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>symptom</word>
+            <lemma>symptom</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>reduction</word>
+            <lemma>reduction</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>as</word>
+            <lemma>as</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>efficacy</word>
+            <lemma>efficacy</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>measure</word>
+            <lemma>measure</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (`` ``) (JJ Confirmatory) ('' '') (NNS trials)) (: :) (NP (NP (NN symptom) (NN reduction)) (PP (IN as) (NP (NN efficacy) (NN measure)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="4">trials</governor>
+            <dependent idx="2">Confirmatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">reduction</governor>
+            <dependent idx="6">symptom</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">trials</governor>
+            <dependent idx="7">reduction</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">reduction</governor>
+            <dependent idx="8">as</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">measure</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">as</governor>
+            <dependent idx="10">measure</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="4">trials</governor>
+            <dependent idx="2">Confirmatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">reduction</governor>
+            <dependent idx="6">symptom</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">trials</governor>
+            <dependent idx="7">reduction</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">measure</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+          <dep type="prep_as">
+            <governor idx="7">reduction</governor>
+            <dependent idx="10">measure</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="4">trials</governor>
+            <dependent idx="2">Confirmatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">reduction</governor>
+            <dependent idx="6">symptom</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">trials</governor>
+            <dependent idx="7">reduction</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">measure</governor>
+            <dependent idx="9">efficacy</dependent>
+          </dep>
+          <dep type="prep_as">
+            <governor idx="7">reduction</governor>
+            <dependent idx="10">measure</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

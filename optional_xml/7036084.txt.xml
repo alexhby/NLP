@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>Credé</word>
+            <lemma>credé</lemma>
+            <CharacterOffsetBegin>1</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="3">
+            <word>'s</word>
+            <lemma>'s</lemma>
+            <CharacterOffsetBegin>6</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>POS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>prevention</word>
+            <lemma>prevention</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>method</word>
+            <lemma>method</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>has</word>
+            <lemma>have</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>lost</word>
+            <lemma>lose</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>its</word>
+            <lemma>its</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>justification</word>
+            <lemma>justification</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>today</word>
+            <lemma>today</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>THIS P1D</NormalizedNER>
+            <Timex tid="t1" type="DATE"/>
+          </token>
+          <token id="11">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (-LRB- -LRB-) (NP (NP (NN Credé) (POS 's)) (NN prevention) (NN method)) (VP (VBZ has) (VP (VBN lost) (NP (PRP$ its) (NN justification)) (NP-TMP (NN today)))) (-RRB- -RRB-) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="poss">
+            <governor idx="5">method</governor>
+            <dependent idx="2">Credé</dependent>
+          </dep>
+          <dep type="possessive">
+            <governor idx="2">Credé</governor>
+            <dependent idx="3">'s</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">method</governor>
+            <dependent idx="4">prevention</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">lost</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="7">lost</governor>
+            <dependent idx="6">has</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="9">justification</governor>
+            <dependent idx="8">its</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">lost</governor>
+            <dependent idx="9">justification</dependent>
+          </dep>
+          <dep type="tmod">
+            <governor idx="7">lost</governor>
+            <dependent idx="10">today</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="poss">
+            <governor idx="5">method</governor>
+            <dependent idx="2">Credé</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">method</governor>
+            <dependent idx="4">prevention</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">lost</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="7">lost</governor>
+            <dependent idx="6">has</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="9">justification</governor>
+            <dependent idx="8">its</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">lost</governor>
+            <dependent idx="9">justification</dependent>
+          </dep>
+          <dep type="tmod">
+            <governor idx="7">lost</governor>
+            <dependent idx="10">today</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="poss">
+            <governor idx="5">method</governor>
+            <dependent idx="2">Credé</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">method</governor>
+            <dependent idx="4">prevention</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">lost</governor>
+            <dependent idx="5">method</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="7">lost</governor>
+            <dependent idx="6">has</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="9">justification</governor>
+            <dependent idx="8">its</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="7">lost</governor>
+            <dependent idx="9">justification</dependent>
+          </dep>
+          <dep type="tmod">
+            <governor idx="7">lost</governor>
+            <dependent idx="10">today</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

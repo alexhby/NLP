@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Brief</word>
+            <lemma>brief</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>5</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>report</word>
+            <lemma>report</lemma>
+            <CharacterOffsetBegin>6</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>a</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>pilot</word>
+            <lemma>pilot</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>study</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>auditory</word>
+            <lemma>auditory</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>integration</word>
+            <lemma>integration</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>51</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>training</word>
+            <lemma>training</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>autism</word>
+            <lemma>autism</lemma>
+            <CharacterOffsetBegin>64</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Brief) (NN report)) (: :) (NP (NP (DT a) (NN pilot) (NN study)) (PP (IN of) (NP (NP (JJ auditory) (NN integration) (NN training)) (PP (IN in) (NP (NN autism)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">study</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">study</governor>
+            <dependent idx="5">pilot</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="6">study</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">study</governor>
+            <dependent idx="7">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">training</governor>
+            <dependent idx="8">auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">training</governor>
+            <dependent idx="9">integration</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">of</governor>
+            <dependent idx="10">training</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="10">training</governor>
+            <dependent idx="11">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="11">in</governor>
+            <dependent idx="12">autism</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">study</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">study</governor>
+            <dependent idx="5">pilot</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="6">study</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">training</governor>
+            <dependent idx="8">auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">training</governor>
+            <dependent idx="9">integration</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">study</governor>
+            <dependent idx="10">training</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="10">training</governor>
+            <dependent idx="12">autism</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">study</governor>
+            <dependent idx="4">a</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">study</governor>
+            <dependent idx="5">pilot</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="6">study</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">training</governor>
+            <dependent idx="8">auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="10">training</governor>
+            <dependent idx="9">integration</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">study</governor>
+            <dependent idx="10">training</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="10">training</governor>
+            <dependent idx="12">autism</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

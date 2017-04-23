@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>New</word>
+            <lemma>new</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>3</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>drug</word>
+            <lemma>drug</lemma>
+            <CharacterOffsetBegin>4</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>trials</word>
+            <lemma>trial</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>attention</word>
+            <lemma>attention</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>deficit</word>
+            <lemma>deficit</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>disorder</word>
+            <lemma>disorder</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ New) (NN drug) (NNS trials)) (PP (IN in) (NP (NN attention) (NN deficit) (NN disorder))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">trials</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">trials</governor>
+            <dependent idx="2">drug</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">trials</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="5">attention</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="6">deficit</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="7">disorder</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">trials</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">trials</governor>
+            <dependent idx="2">drug</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="5">attention</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="6">deficit</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">trials</governor>
+            <dependent idx="7">disorder</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">trials</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">trials</governor>
+            <dependent idx="2">drug</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="5">attention</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">disorder</governor>
+            <dependent idx="6">deficit</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">trials</governor>
+            <dependent idx="7">disorder</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

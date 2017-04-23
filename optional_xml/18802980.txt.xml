@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>CASTLE</word>
+            <lemma>castle</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>data</word>
+            <lemma>datum</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>show</word>
+            <lemma>show</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>no</word>
+            <lemma>no</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>gender</word>
+            <lemma>gender</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>differences</word>
+            <lemma>difference</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NN CASTLE) (NNS data)) (VP (VBP show) (NP (DT no) (NN gender) (NNS differences))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">data</governor>
+            <dependent idx="1">CASTLE</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">show</governor>
+            <dependent idx="2">data</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">differences</governor>
+            <dependent idx="4">no</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">differences</governor>
+            <dependent idx="5">gender</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">show</governor>
+            <dependent idx="6">differences</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">data</governor>
+            <dependent idx="1">CASTLE</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">show</governor>
+            <dependent idx="2">data</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">differences</governor>
+            <dependent idx="4">no</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">differences</governor>
+            <dependent idx="5">gender</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">show</governor>
+            <dependent idx="6">differences</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">data</governor>
+            <dependent idx="1">CASTLE</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">show</governor>
+            <dependent idx="2">data</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">differences</governor>
+            <dependent idx="4">no</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">differences</governor>
+            <dependent idx="5">gender</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">show</governor>
+            <dependent idx="6">differences</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

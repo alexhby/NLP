@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>The</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>3</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>effects</word>
+            <lemma>effect</lemma>
+            <CharacterOffsetBegin>4</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>14</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>amantadine</word>
+            <lemma>amantadine</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>vs.</word>
+            <lemma>vs.</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>trihexyphenidyl</word>
+            <lemma>trihexyphenidyl</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>memory</word>
+            <lemma>memory</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>elderly</word>
+            <lemma>elderly</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>normal</word>
+            <lemma>normal</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>volunteers</word>
+            <lemma>volunteer</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>84</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (DT The) (NNS effects)) (PP (IN of) (NP (NN amantadine))) (PP (CC vs.) (NP (NP (NN trihexyphenidyl)) (PP (IN on) (NP (NN memory))))) (PP (IN in) (NP (JJ elderly) (JJ normal) (NNS volunteers))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="3">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">of</governor>
+            <dependent idx="4">amantadine</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="5">vs.</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="5">vs.</governor>
+            <dependent idx="6">trihexyphenidyl</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">trihexyphenidyl</governor>
+            <dependent idx="7">on</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">on</governor>
+            <dependent idx="8">memory</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="9">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="10">elderly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="11">normal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">in</governor>
+            <dependent idx="12">volunteers</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="4">amantadine</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="5">vs.</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="5">vs.</governor>
+            <dependent idx="6">trihexyphenidyl</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="6">trihexyphenidyl</governor>
+            <dependent idx="8">memory</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="10">elderly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="11">normal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">effects</governor>
+            <dependent idx="12">volunteers</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="2">effects</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">effects</governor>
+            <dependent idx="4">amantadine</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">effects</governor>
+            <dependent idx="5">vs.</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="5">vs.</governor>
+            <dependent idx="6">trihexyphenidyl</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="6">trihexyphenidyl</governor>
+            <dependent idx="8">memory</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="10">elderly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">volunteers</governor>
+            <dependent idx="11">normal</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">effects</governor>
+            <dependent idx="12">volunteers</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

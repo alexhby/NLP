@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Disopyramide</word>
+            <lemma>Disopyramide</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>prevention</word>
+            <lemma>prevention</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>arrhythmias</word>
+            <lemma>arrhythmia</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>following</word>
+            <lemma>follow</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>myocardial</word>
+            <lemma>myocardial</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>80</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>infarction</word>
+            <lemma>infarction</lemma>
+            <CharacterOffsetBegin>81</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>91</CharacterOffsetBegin>
+            <CharacterOffsetEnd>92</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NNP Disopyramide)) (PP (IN in) (NP (NP (DT the) (NN treatment) (CC and) (NN prevention)) (PP (IN of) (NP (NP (NNS arrhythmias)) (PP (VBG following) (NP (JJ myocardial) (NN infarction))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Disopyramide</governor>
+            <dependent idx="2">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">in</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">treatment</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">treatment</governor>
+            <dependent idx="6">prevention</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">treatment</governor>
+            <dependent idx="7">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">of</governor>
+            <dependent idx="8">arrhythmias</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">arrhythmias</governor>
+            <dependent idx="9">following</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">infarction</governor>
+            <dependent idx="10">myocardial</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">following</governor>
+            <dependent idx="11">infarction</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Disopyramide</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">treatment</governor>
+            <dependent idx="6">prevention</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="4">treatment</governor>
+            <dependent idx="8">arrhythmias</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">infarction</governor>
+            <dependent idx="10">myocardial</dependent>
+          </dep>
+          <dep type="prep_following">
+            <governor idx="8">arrhythmias</governor>
+            <dependent idx="11">infarction</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Disopyramide</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Disopyramide</governor>
+            <dependent idx="6">prevention</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">treatment</governor>
+            <dependent idx="6">prevention</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="4">treatment</governor>
+            <dependent idx="8">arrhythmias</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">infarction</governor>
+            <dependent idx="10">myocardial</dependent>
+          </dep>
+          <dep type="prep_following">
+            <governor idx="8">arrhythmias</governor>
+            <dependent idx="11">infarction</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

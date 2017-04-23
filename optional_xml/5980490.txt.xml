@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Alcoholism</word>
+            <lemma>alcoholism</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>avoidance</word>
+            <lemma>avoidance</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>learning</word>
+            <lemma>learning</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>emotional</word>
+            <lemma>emotional</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>responsiveness</word>
+            <lemma>responsiveness</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Alcoholism)) (, ,) (NP (NP (NN avoidance) (NN learning)) (CC and) (NP (JJ emotional) (NN responsiveness))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="4">learning</governor>
+            <dependent idx="3">avoidance</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="1">Alcoholism</governor>
+            <dependent idx="4">learning</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">learning</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">responsiveness</governor>
+            <dependent idx="6">emotional</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">learning</governor>
+            <dependent idx="7">responsiveness</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="4">learning</governor>
+            <dependent idx="3">avoidance</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="1">Alcoholism</governor>
+            <dependent idx="4">learning</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">responsiveness</governor>
+            <dependent idx="6">emotional</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">learning</governor>
+            <dependent idx="7">responsiveness</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="4">learning</governor>
+            <dependent idx="3">avoidance</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="1">Alcoholism</governor>
+            <dependent idx="4">learning</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">responsiveness</governor>
+            <dependent idx="6">emotional</dependent>
+          </dep>
+          <dep type="appos">
+            <governor idx="1">Alcoholism</governor>
+            <dependent idx="7">responsiveness</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">learning</governor>
+            <dependent idx="7">responsiveness</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Aspirin</word>
+            <lemma>aspirin</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>coronary</word>
+            <lemma>coronary</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>heart</word>
+            <lemma>heart</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>disease</word>
+            <lemma>disease</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Aspirin)) (PP (IN in) (NP (JJ coronary) (NN heart) (NN disease))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Aspirin</governor>
+            <dependent idx="2">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">disease</governor>
+            <dependent idx="3">coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">disease</governor>
+            <dependent idx="4">heart</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">in</governor>
+            <dependent idx="5">disease</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="5">disease</governor>
+            <dependent idx="3">coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">disease</governor>
+            <dependent idx="4">heart</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Aspirin</governor>
+            <dependent idx="5">disease</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="5">disease</governor>
+            <dependent idx="3">coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">disease</governor>
+            <dependent idx="4">heart</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Aspirin</governor>
+            <dependent idx="5">disease</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>The</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>Coronary</word>
+            <lemma>coronary</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="3">
+            <word>Drug</word>
+            <lemma>Drug</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="4">
+            <word>Project</word>
+            <lemma>Project</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="5">
+            <word>Research</word>
+            <lemma>Research</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="6">
+            <word>Group</word>
+            <lemma>Group</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="7">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (DT The) (JJ Coronary) (NNP Drug) (NNP Project)) (NP (NNP Research) (NNP Group)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="4">Project</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">Project</governor>
+            <dependent idx="2">Coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">Project</governor>
+            <dependent idx="3">Drug</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">Group</governor>
+            <dependent idx="5">Research</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">Project</governor>
+            <dependent idx="6">Group</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="4">Project</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">Project</governor>
+            <dependent idx="2">Coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">Project</governor>
+            <dependent idx="3">Drug</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">Group</governor>
+            <dependent idx="5">Research</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">Project</governor>
+            <dependent idx="6">Group</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="4">Project</governor>
+            <dependent idx="1">The</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">Project</governor>
+            <dependent idx="2">Coronary</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">Project</governor>
+            <dependent idx="3">Drug</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">Group</governor>
+            <dependent idx="5">Research</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">Project</governor>
+            <dependent idx="6">Group</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

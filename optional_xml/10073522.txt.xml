@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Fertility</word>
+            <lemma>fertility</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>outcome</word>
+            <lemma>outcome</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>23</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>systemic</word>
+            <lemma>systemic</lemma>
+            <CharacterOffsetBegin>24</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>methotrexate</word>
+            <lemma>methotrexate</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>laparoscopic</word>
+            <lemma>laparoscopic</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>salpingostomy</word>
+            <lemma>salpingostomy</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>77</CharacterOffsetBegin>
+            <CharacterOffsetEnd>80</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>tubal</word>
+            <lemma>tubal</lemma>
+            <CharacterOffsetBegin>81</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>pregnancy</word>
+            <lemma>pregnancy</lemma>
+            <CharacterOffsetBegin>87</CharacterOffsetBegin>
+            <CharacterOffsetEnd>96</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>96</CharacterOffsetBegin>
+            <CharacterOffsetEnd>97</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Fertility) (NN outcome)) (PP (IN after) (NP (NP (JJ systemic) (NN methotrexate)) (CC and) (NP (JJ laparoscopic) (NN salpingostomy)))) (PP (IN for) (NP (JJ tubal) (NN pregnancy))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">outcome</governor>
+            <dependent idx="1">Fertility</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">outcome</governor>
+            <dependent idx="3">after</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="4">systemic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">after</governor>
+            <dependent idx="5">methotrexate</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">salpingostomy</governor>
+            <dependent idx="7">laparoscopic</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="8">salpingostomy</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">outcome</governor>
+            <dependent idx="9">for</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">pregnancy</governor>
+            <dependent idx="10">tubal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">for</governor>
+            <dependent idx="11">pregnancy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">outcome</governor>
+            <dependent idx="1">Fertility</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="4">systemic</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="2">outcome</governor>
+            <dependent idx="5">methotrexate</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">salpingostomy</governor>
+            <dependent idx="7">laparoscopic</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="8">salpingostomy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">pregnancy</governor>
+            <dependent idx="10">tubal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="2">outcome</governor>
+            <dependent idx="11">pregnancy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">outcome</governor>
+            <dependent idx="1">Fertility</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="4">systemic</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="2">outcome</governor>
+            <dependent idx="5">methotrexate</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">salpingostomy</governor>
+            <dependent idx="7">laparoscopic</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="2">outcome</governor>
+            <dependent idx="8">salpingostomy</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">methotrexate</governor>
+            <dependent idx="8">salpingostomy</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">pregnancy</governor>
+            <dependent idx="10">tubal</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="2">outcome</governor>
+            <dependent idx="11">pregnancy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

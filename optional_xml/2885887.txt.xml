@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Noradrenergic</word>
+            <lemma>noradrenergic</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>mechanisms</word>
+            <lemma>mechanism</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>akathisia</word>
+            <lemma>akathisium</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>propranolol</word>
+            <lemma>propranolol</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>clonidine</word>
+            <lemma>clonidine</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>79</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>79</CharacterOffsetBegin>
+            <CharacterOffsetEnd>80</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (JJ Noradrenergic) (NNS mechanisms)) (PP (IN in) (NP (NN akathisia)))) (: :) (NP (NP (NN treatment)) (PP (IN with) (NP (NN propranolol) (CC and) (NN clonidine)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="1">Noradrenergic</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="3">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">in</governor>
+            <dependent idx="4">akathisia</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="6">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">treatment</governor>
+            <dependent idx="7">with</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">with</governor>
+            <dependent idx="8">propranolol</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="8">propranolol</governor>
+            <dependent idx="9">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="8">propranolol</governor>
+            <dependent idx="10">clonidine</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="1">Noradrenergic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="4">akathisia</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="6">treatment</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="6">treatment</governor>
+            <dependent idx="8">propranolol</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="8">propranolol</governor>
+            <dependent idx="10">clonidine</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="1">Noradrenergic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="4">akathisia</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">mechanisms</governor>
+            <dependent idx="6">treatment</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="6">treatment</governor>
+            <dependent idx="8">propranolol</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="6">treatment</governor>
+            <dependent idx="10">clonidine</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="8">propranolol</governor>
+            <dependent idx="10">clonidine</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

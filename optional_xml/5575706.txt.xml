@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Triamcinolone</word>
+            <lemma>Triamcinolone</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>acetonide</word>
+            <lemma>acetonide</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>23</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>24</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>bursitis</word>
+            <lemma>bursitis</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>other</word>
+            <lemma>other</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>foot</word>
+            <lemma>foot</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>disorders</word>
+            <lemma>disorder</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>77</CharacterOffsetBegin>
+            <CharacterOffsetEnd>78</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NNP Triamcinolone) (NN acetonide)) (PP (IN in) (NP (DT the) (NN treatment))) (PP (IN of) (NP (NP (NN bursitis) (CC and) (JJ other)) (NN foot) (NNS disorders))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="1">Triamcinolone</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="3">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">treatment</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">in</governor>
+            <dependent idx="5">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="6">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="7">bursitis</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">bursitis</governor>
+            <dependent idx="8">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="7">bursitis</governor>
+            <dependent idx="9">other</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="10">foot</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">of</governor>
+            <dependent idx="11">disorders</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="1">Triamcinolone</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">treatment</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="5">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="7">bursitis</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">bursitis</governor>
+            <dependent idx="9">other</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="10">foot</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="11">disorders</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="1">Triamcinolone</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="5">treatment</governor>
+            <dependent idx="4">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="5">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="7">bursitis</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">bursitis</governor>
+            <dependent idx="9">other</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="9">other</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">disorders</governor>
+            <dependent idx="10">foot</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">acetonide</governor>
+            <dependent idx="11">disorders</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

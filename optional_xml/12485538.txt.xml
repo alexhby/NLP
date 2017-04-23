@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Risperidone</word>
+            <lemma>Risperidone</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>improves</word>
+            <lemma>improve</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>20</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>behavior</word>
+            <lemma>behavior</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>children</word>
+            <lemma>child</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>autism</word>
+            <lemma>autism</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP Risperidone)) (VP (VBZ improves) (NP (NN behavior)) (PP (IN in) (NP (NP (NNS children)) (PP (IN with) (NP (NN autism)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">improves</governor>
+            <dependent idx="1">Risperidone</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="2">improves</governor>
+            <dependent idx="3">behavior</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">improves</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">children</governor>
+            <dependent idx="6">with</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">with</governor>
+            <dependent idx="7">autism</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">improves</governor>
+            <dependent idx="1">Risperidone</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="2">improves</governor>
+            <dependent idx="3">behavior</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">improves</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="5">children</governor>
+            <dependent idx="7">autism</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="2">improves</governor>
+            <dependent idx="1">Risperidone</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="2">improves</governor>
+            <dependent idx="3">behavior</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">improves</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="5">children</governor>
+            <dependent idx="7">autism</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

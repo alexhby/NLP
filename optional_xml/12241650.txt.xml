@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Laser</word>
+            <lemma>Laser</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>5</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>6</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>childhood</word>
+            <lemma>childhood</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>haemangioma</word>
+            <lemma>haemangioma</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>progress</word>
+            <lemma>progress</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>not</word>
+            <lemma>not</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>?</word>
+            <lemma>?</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (FRAG (FRAG (NP (NNP Laser)) (NP (NP (NN treatment)) (PP (IN of) (NP (NN childhood) (NN haemangioma))))) (: :) (FRAG (NP (NN progress)) (CC or) (RB not)) (. ?))) </parse>
+        <basic-dependencies>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="2">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">treatment</governor>
+            <dependent idx="3">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">haemangioma</governor>
+            <dependent idx="4">childhood</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">of</governor>
+            <dependent idx="5">haemangioma</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="7">progress</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="7">progress</governor>
+            <dependent idx="8">or</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="7">progress</governor>
+            <dependent idx="9">not</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="2">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">haemangioma</governor>
+            <dependent idx="4">childhood</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">treatment</governor>
+            <dependent idx="5">haemangioma</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="7">progress</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="7">progress</governor>
+            <dependent idx="8">or</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="7">progress</governor>
+            <dependent idx="9">not</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="2">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">haemangioma</governor>
+            <dependent idx="4">childhood</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">treatment</governor>
+            <dependent idx="5">haemangioma</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Laser</governor>
+            <dependent idx="7">progress</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="7">progress</governor>
+            <dependent idx="8">or</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="7">progress</governor>
+            <dependent idx="9">not</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

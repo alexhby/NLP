@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Azathioprine</word>
+            <lemma>Azathioprine</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>20</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>chronic</word>
+            <lemma>chronic</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>inflammatory</word>
+            <lemma>inflammatory</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>bowel</word>
+            <lemma>bowel</lemma>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>disease</word>
+            <lemma>disease</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (NNP Azathioprine)) (CC and) (NP (NP (DT the) (NN treatment)) (PP (IN of) (NP (JJ chronic) (JJ inflammatory) (NN bowel) (NN disease))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="cc">
+            <governor idx="1">Azathioprine</governor>
+            <dependent idx="2">and</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="1">Azathioprine</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">treatment</governor>
+            <dependent idx="5">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="6">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="7">inflammatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">disease</governor>
+            <dependent idx="8">bowel</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">of</governor>
+            <dependent idx="9">disease</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Azathioprine</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="6">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="7">inflammatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">disease</governor>
+            <dependent idx="8">bowel</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="4">treatment</governor>
+            <dependent idx="9">disease</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="4">treatment</governor>
+            <dependent idx="3">the</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="1">Azathioprine</governor>
+            <dependent idx="4">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="6">chronic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disease</governor>
+            <dependent idx="7">inflammatory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">disease</governor>
+            <dependent idx="8">bowel</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="4">treatment</governor>
+            <dependent idx="9">disease</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Response</word>
+            <lemma>response</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>20</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>23</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>enalapril</word>
+            <lemma>enalapril</lemma>
+            <CharacterOffsetBegin>24</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>,</word>
+            <lemma>,</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>,</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>felodipine</word>
+            <lemma>felodipine</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>their</word>
+            <lemma>they</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>PRP$</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>combination</word>
+            <lemma>combination</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Response)) (PP (IN of) (NP (NNS patients))) (PP (TO to) (NP (NP (NN enalapril)) (, ,) (NP (NN felodipine)) (CC and) (NP (PRP$ their) (NN combination)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Response</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Response</governor>
+            <dependent idx="4">to</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">to</governor>
+            <dependent idx="5">enalapril</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="7">felodipine</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="8">and</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="10">combination</governor>
+            <dependent idx="9">their</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="10">combination</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="prep_of">
+            <governor idx="1">Response</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="1">Response</governor>
+            <dependent idx="5">enalapril</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="7">felodipine</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="10">combination</governor>
+            <dependent idx="9">their</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="10">combination</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="prep_of">
+            <governor idx="1">Response</governor>
+            <dependent idx="3">patients</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="1">Response</governor>
+            <dependent idx="5">enalapril</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="1">Response</governor>
+            <dependent idx="7">felodipine</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="7">felodipine</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="10">combination</governor>
+            <dependent idx="9">their</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="1">Response</governor>
+            <dependent idx="10">combination</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">enalapril</governor>
+            <dependent idx="10">combination</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

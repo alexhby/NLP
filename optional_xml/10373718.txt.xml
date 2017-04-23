@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Emerging</word>
+            <lemma>emerge</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>acute</word>
+            <lemma>acute</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>coronary</word>
+            <lemma>coronary</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>syndromes</word>
+            <lemma>syndrome</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>51</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>platelet</word>
+            <lemma>platelet</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>glycoprotein</word>
+            <lemma>glycoprotein</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>IIB\/IIIA</word>
+            <lemma>iib\/iiia</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>inhibitors</word>
+            <lemma>inhibitor</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>93</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>93</CharacterOffsetBegin>
+            <CharacterOffsetEnd>94</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (VBG Emerging) (NN treatment)) (PP (IN of) (NP (NP (JJ acute) (JJ coronary) (NNS syndromes)) (PP (IN with) (NP (NN platelet) (NN glycoprotein) (NN IIB\/IIIA) (NNS inhibitors))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Emerging</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">treatment</governor>
+            <dependent idx="3">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="5">coronary</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">of</governor>
+            <dependent idx="6">syndromes</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="7">with</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="8">platelet</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="9">glycoprotein</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="10">IIB\/IIIA</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">with</governor>
+            <dependent idx="11">inhibitors</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Emerging</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="5">coronary</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">treatment</governor>
+            <dependent idx="6">syndromes</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="8">platelet</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="9">glycoprotein</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="10">IIB\/IIIA</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="11">inhibitors</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Emerging</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="4">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="5">coronary</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="2">treatment</governor>
+            <dependent idx="6">syndromes</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="8">platelet</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="9">glycoprotein</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="11">inhibitors</governor>
+            <dependent idx="10">IIB\/IIIA</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="6">syndromes</governor>
+            <dependent idx="11">inhibitors</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

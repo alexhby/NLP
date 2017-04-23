@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Liquid</word>
+            <lemma>liquid</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>antacids</word>
+            <lemma>antacid</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>palatability</word>
+            <lemma>palatability</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>predictability</word>
+            <lemma>predictability</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>study</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Liquid) (NNS antacids)) (: :) (NP (NP (NN palatability) (CC and) (NN predictability)) (NN study)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">antacids</governor>
+            <dependent idx="1">Liquid</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">study</governor>
+            <dependent idx="4">palatability</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">palatability</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">palatability</governor>
+            <dependent idx="6">predictability</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">antacids</governor>
+            <dependent idx="7">study</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">antacids</governor>
+            <dependent idx="1">Liquid</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">study</governor>
+            <dependent idx="4">palatability</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">palatability</governor>
+            <dependent idx="6">predictability</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">antacids</governor>
+            <dependent idx="7">study</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">antacids</governor>
+            <dependent idx="1">Liquid</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">study</governor>
+            <dependent idx="4">palatability</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">palatability</governor>
+            <dependent idx="6">predictability</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">study</governor>
+            <dependent idx="6">predictability</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">antacids</governor>
+            <dependent idx="7">study</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

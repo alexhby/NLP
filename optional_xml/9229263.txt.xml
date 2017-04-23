@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Brief</word>
+            <lemma>brief</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>5</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>report</word>
+            <lemma>report</lemma>
+            <CharacterOffsetBegin>6</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>autistic</word>
+            <lemma>autistic</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>children</word>
+            <lemma>child</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>31</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>'s</word>
+            <lemma>'s</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>POS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>attentiveness</word>
+            <lemma>attentiveness</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>51</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>responsivity</word>
+            <lemma>responsivity</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>improve</word>
+            <lemma>improve</lemma>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>73</CharacterOffsetBegin>
+            <CharacterOffsetEnd>78</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>touch</word>
+            <lemma>touch</lemma>
+            <CharacterOffsetBegin>79</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>therapy</word>
+            <lemma>therapy</lemma>
+            <CharacterOffsetBegin>85</CharacterOffsetBegin>
+            <CharacterOffsetEnd>92</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>93</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Brief) (NN report)) (: :) (NP (NP (NP (JJ autistic) (NNS children) (POS 's)) (NN attentiveness)) (CC and) (NP (NN responsivity) (S (VP (VB improve) (PP (IN after) (NP (NN touch) (NN therapy))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">children</governor>
+            <dependent idx="4">autistic</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="possessive">
+            <governor idx="5">children</governor>
+            <dependent idx="6">'s</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="7">attentiveness</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="8">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="9">responsivity</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="9">responsivity</governor>
+            <dependent idx="10">improve</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="10">improve</governor>
+            <dependent idx="11">after</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">therapy</governor>
+            <dependent idx="12">touch</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="11">after</governor>
+            <dependent idx="13">therapy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">children</governor>
+            <dependent idx="4">autistic</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="7">attentiveness</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="9">responsivity</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="9">responsivity</governor>
+            <dependent idx="10">improve</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">therapy</governor>
+            <dependent idx="12">touch</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="10">improve</governor>
+            <dependent idx="13">therapy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">report</governor>
+            <dependent idx="1">Brief</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">children</governor>
+            <dependent idx="4">autistic</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="5">children</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="7">attentiveness</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">report</governor>
+            <dependent idx="9">responsivity</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">attentiveness</governor>
+            <dependent idx="9">responsivity</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="9">responsivity</governor>
+            <dependent idx="10">improve</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">therapy</governor>
+            <dependent idx="12">touch</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="10">improve</governor>
+            <dependent idx="13">therapy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

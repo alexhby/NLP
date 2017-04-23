@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Effects</word>
+            <lemma>effect</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>brain-penetrating</word>
+            <lemma>brain-penetrating</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>ACE</word>
+            <lemma>ace</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>inhibitors</word>
+            <lemma>inhibitor</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>Alzheimer</word>
+            <lemma>alzheimer</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>disease</word>
+            <lemma>disease</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>progression</word>
+            <lemma>progression</lemma>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NNS Effects)) (PP (IN of) (NP (JJ brain-penetrating) (NN ACE) (NNS inhibitors))) (PP (IN on) (NP (NN Alzheimer) (NN disease) (NN progression))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Effects</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="3">brain-penetrating</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="4">ACE</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="5">inhibitors</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Effects</governor>
+            <dependent idx="6">on</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="7">Alzheimer</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="8">disease</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">on</governor>
+            <dependent idx="9">progression</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="3">brain-penetrating</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="4">ACE</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Effects</governor>
+            <dependent idx="5">inhibitors</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="7">Alzheimer</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="8">disease</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="1">Effects</governor>
+            <dependent idx="9">progression</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="3">brain-penetrating</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">inhibitors</governor>
+            <dependent idx="4">ACE</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Effects</governor>
+            <dependent idx="5">inhibitors</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="7">Alzheimer</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">progression</governor>
+            <dependent idx="8">disease</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="1">Effects</governor>
+            <dependent idx="9">progression</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

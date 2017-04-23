@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Comparison</word>
+            <lemma>comparison</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>between</word>
+            <lemma>between</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>lithium</word>
+            <lemma>lithium</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>valproate</word>
+            <lemma>valproate</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>58</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>acute</word>
+            <lemma>acute</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>mania</word>
+            <lemma>mania</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>72</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Comparison)) (PP (IN between) (NP (NN lithium) (CC and) (NN valproate))) (PP (IN in) (NP (NP (DT the) (NN treatment)) (PP (IN of) (NP (JJ acute) (NN mania))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="2">between</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">between</governor>
+            <dependent idx="3">lithium</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="3">lithium</governor>
+            <dependent idx="4">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="3">lithium</governor>
+            <dependent idx="5">valproate</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="6">in</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">treatment</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">in</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">treatment</governor>
+            <dependent idx="9">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mania</governor>
+            <dependent idx="10">acute</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">of</governor>
+            <dependent idx="11">mania</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="prep_between">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="3">lithium</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">lithium</governor>
+            <dependent idx="5">valproate</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">treatment</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mania</governor>
+            <dependent idx="10">acute</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="8">treatment</governor>
+            <dependent idx="11">mania</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="prep_between">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="3">lithium</dependent>
+          </dep>
+          <dep type="prep_between">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="5">valproate</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">lithium</governor>
+            <dependent idx="5">valproate</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="8">treatment</governor>
+            <dependent idx="7">the</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Comparison</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mania</governor>
+            <dependent idx="10">acute</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="8">treatment</governor>
+            <dependent idx="11">mania</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

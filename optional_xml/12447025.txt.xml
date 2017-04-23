@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Lofexidine</word>
+            <lemma>lofexidine</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>hyperactive</word>
+            <lemma>hyperactive</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>impulsive</word>
+            <lemma>impulsive</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>children</word>
+            <lemma>child</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>autistic</word>
+            <lemma>autistic</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>disorder</word>
+            <lemma>disorder</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>71</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Lofexidine)) (PP (IN in) (NP (ADJP (JJ hyperactive) (CC and) (JJ impulsive)) (NNS children))) (PP (IN with) (NP (JJ autistic) (NN disorder))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="2">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">children</governor>
+            <dependent idx="3">hyperactive</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="3">hyperactive</governor>
+            <dependent idx="4">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="3">hyperactive</governor>
+            <dependent idx="5">impulsive</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">in</governor>
+            <dependent idx="6">children</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="7">with</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disorder</governor>
+            <dependent idx="8">autistic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">with</governor>
+            <dependent idx="9">disorder</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="6">children</governor>
+            <dependent idx="3">hyperactive</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">hyperactive</governor>
+            <dependent idx="5">impulsive</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="6">children</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disorder</governor>
+            <dependent idx="8">autistic</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="9">disorder</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="6">children</governor>
+            <dependent idx="3">hyperactive</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="3">hyperactive</governor>
+            <dependent idx="5">impulsive</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">children</governor>
+            <dependent idx="5">impulsive</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="6">children</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">disorder</governor>
+            <dependent idx="8">autistic</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="1">Lofexidine</governor>
+            <dependent idx="9">disorder</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

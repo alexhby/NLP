@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Pharmacokinetics</word>
+            <lemma>pharmacokinetic</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>cefuroxime</word>
+            <lemma>cefuroxime</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>healthy</word>
+            <lemma>healthy</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>volunteers</word>
+            <lemma>volunteer</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>an</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>update</word>
+            <lemma>update</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>63</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (FRAG (NP (NP (NNS Pharmacokinetics)) (PP (IN of) (NP (NN cefuroxime))) (PP (IN in) (NP (JJ healthy) (NNS volunteers)))) (: :) (S (NP (DT an)) (VP (VBP update))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="3">cefuroxime</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">volunteers</governor>
+            <dependent idx="5">healthy</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="6">volunteers</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">update</governor>
+            <dependent idx="8">an</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="9">update</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="prep_of">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="3">cefuroxime</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">volunteers</governor>
+            <dependent idx="5">healthy</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="6">volunteers</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">update</governor>
+            <dependent idx="8">an</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="9">update</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="prep_of">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="3">cefuroxime</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">volunteers</governor>
+            <dependent idx="5">healthy</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="6">volunteers</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="9">update</governor>
+            <dependent idx="8">an</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Pharmacokinetics</governor>
+            <dependent idx="9">update</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

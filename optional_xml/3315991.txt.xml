@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Intravenous</word>
+            <lemma>intravenous</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>lignocaine</word>
+            <lemma>lignocaine</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>&amp;</word>
+            <lemma>&amp;</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>hemodynamic</word>
+            <lemma>hemodynamic</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>responses</word>
+            <lemma>response</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>48</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>cystoscopy</word>
+            <lemma>cystoscopy</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (JJ Intravenous) (NN lignocaine)) (CC &amp;) (NP (NP (JJ hemodynamic) (NNS responses)) (PP (TO to) (NP (NN cystoscopy))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="1">Intravenous</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="3">&amp;</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">responses</governor>
+            <dependent idx="4">hemodynamic</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="5">responses</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">responses</governor>
+            <dependent idx="6">to</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">to</governor>
+            <dependent idx="7">cystoscopy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="1">Intravenous</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">responses</governor>
+            <dependent idx="4">hemodynamic</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="5">responses</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="5">responses</governor>
+            <dependent idx="7">cystoscopy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="1">Intravenous</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="5">responses</governor>
+            <dependent idx="4">hemodynamic</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="2">lignocaine</governor>
+            <dependent idx="5">responses</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="5">responses</governor>
+            <dependent idx="7">cystoscopy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Does</word>
+            <lemma>do</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>4</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>wavelength</word>
+            <lemma>wavelength</lemma>
+            <CharacterOffsetBegin>5</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>matter</word>
+            <lemma>matter</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>when</word>
+            <lemma>when</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>WRB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>photocoagulating</word>
+            <lemma>photocoagulate</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>eyes</word>
+            <lemma>eye</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>macular</word>
+            <lemma>macular</lemma>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>62</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>degeneration</word>
+            <lemma>degeneration</lemma>
+            <CharacterOffsetBegin>63</CharacterOffsetBegin>
+            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>78</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>diabetic</word>
+            <lemma>diabetic</lemma>
+            <CharacterOffsetBegin>79</CharacterOffsetBegin>
+            <CharacterOffsetEnd>87</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>retinopathy</word>
+            <lemma>retinopathy</lemma>
+            <CharacterOffsetBegin>88</CharacterOffsetBegin>
+            <CharacterOffsetEnd>99</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>?</word>
+            <lemma>?</lemma>
+            <CharacterOffsetBegin>99</CharacterOffsetBegin>
+            <CharacterOffsetEnd>100</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (VP (VBZ Does) (NP (NN wavelength) (NN matter)) (SBAR (WHADVP (WRB when)) (S (VP (VBG photocoagulating) (NP (NNS eyes)) (PP (IN with) (NP (NP (JJ macular) (NN degeneration)) (CC or) (NP (JJ diabetic) (NN retinopathy)))))))) (. ?))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="3">matter</governor>
+            <dependent idx="2">wavelength</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="1">Does</governor>
+            <dependent idx="3">matter</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="4">when</dependent>
+          </dep>
+          <dep type="advcl">
+            <governor idx="1">Does</governor>
+            <dependent idx="5">photocoagulating</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="6">eyes</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="7">with</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="8">macular</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">with</governor>
+            <dependent idx="9">degeneration</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="10">or</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">retinopathy</governor>
+            <dependent idx="11">diabetic</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="12">retinopathy</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="3">matter</governor>
+            <dependent idx="2">wavelength</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="1">Does</governor>
+            <dependent idx="3">matter</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="4">when</dependent>
+          </dep>
+          <dep type="advcl">
+            <governor idx="1">Does</governor>
+            <dependent idx="5">photocoagulating</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="6">eyes</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="8">macular</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="9">degeneration</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">retinopathy</governor>
+            <dependent idx="11">diabetic</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="12">retinopathy</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="3">matter</governor>
+            <dependent idx="2">wavelength</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="1">Does</governor>
+            <dependent idx="3">matter</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="4">when</dependent>
+          </dep>
+          <dep type="advcl">
+            <governor idx="1">Does</governor>
+            <dependent idx="5">photocoagulating</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="6">eyes</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="8">macular</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="9">degeneration</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">retinopathy</governor>
+            <dependent idx="11">diabetic</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="5">photocoagulating</governor>
+            <dependent idx="12">retinopathy</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="9">degeneration</governor>
+            <dependent idx="12">retinopathy</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

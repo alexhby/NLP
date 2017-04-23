@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Low-dose</word>
+            <lemma>low-dose</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>magnesium</word>
+            <lemma>magnesium</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>sulfate</word>
+            <lemma>sulfate</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>versus</word>
+            <lemma>versus</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>Pritchard</word>
+            <lemma>pritchard</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>PERSON</NER>
+          </token>
+          <token id="6">
+            <word>regimen</word>
+            <lemma>regimen</lemma>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>51</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>52</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>eclampsia</word>
+            <lemma>eclampsium</lemma>
+            <CharacterOffsetBegin>73</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>imminent</word>
+            <lemma>imminent</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>eclampsia</word>
+            <lemma>eclampsium</lemma>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>101</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>101</CharacterOffsetBegin>
+            <CharacterOffsetEnd>102</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Low-dose) (NN magnesium) (NN sulfate)) (PP (CC versus) (NP (NN Pritchard) (NNS regimen))) (PP (IN for) (NP (NP (DT the) (NN treatment)) (PP (IN of) (NP (NN eclampsia) (JJ imminent) (NN eclampsia))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="1">Low-dose</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="2">magnesium</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="4">versus</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">regimen</governor>
+            <dependent idx="5">Pritchard</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">versus</governor>
+            <dependent idx="6">regimen</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="7">for</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">treatment</governor>
+            <dependent idx="8">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">for</governor>
+            <dependent idx="9">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="9">treatment</governor>
+            <dependent idx="10">of</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="11">eclampsia</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="12">imminent</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="10">of</governor>
+            <dependent idx="13">eclampsia</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="1">Low-dose</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="2">magnesium</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="4">versus</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">regimen</governor>
+            <dependent idx="5">Pritchard</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">versus</governor>
+            <dependent idx="6">regimen</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">treatment</governor>
+            <dependent idx="8">the</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="9">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="11">eclampsia</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="12">imminent</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="9">treatment</governor>
+            <dependent idx="13">eclampsia</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="1">Low-dose</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="2">magnesium</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="4">versus</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="6">regimen</governor>
+            <dependent idx="5">Pritchard</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="4">versus</governor>
+            <dependent idx="6">regimen</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="9">treatment</governor>
+            <dependent idx="8">the</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="3">sulfate</governor>
+            <dependent idx="9">treatment</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="11">eclampsia</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="13">eclampsia</governor>
+            <dependent idx="12">imminent</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="9">treatment</governor>
+            <dependent idx="13">eclampsia</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

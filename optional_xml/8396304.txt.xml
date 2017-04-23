@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Cimetidine</word>
+            <lemma>Cimetidine</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>is</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>not</word>
+            <lemma>not</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>more</word>
+            <lemma>more</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>RBR</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>effective</word>
+            <lemma>effective</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>32</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>than</word>
+            <lemma>than</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>placebo</word>
+            <lemma>placebo</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>acute</word>
+            <lemma>acute</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>infectious</word>
+            <lemma>infectious</lemma>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>mononucleosis</word>
+            <lemma>mononucleosis</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>79</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>79</CharacterOffsetBegin>
+            <CharacterOffsetEnd>80</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP Cimetidine)) (VP (VBZ is) (RB not) (ADJP (RBR more) (JJ effective) (PP (IN than) (NP (NP (NN placebo)) (PP (IN in) (NP (JJ acute) (JJ infectious) (NN mononucleosis))))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">effective</governor>
+            <dependent idx="1">Cimetidine</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">effective</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="5">effective</governor>
+            <dependent idx="3">not</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">effective</governor>
+            <dependent idx="4">more</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">effective</governor>
+            <dependent idx="6">than</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="6">than</governor>
+            <dependent idx="7">placebo</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">placebo</governor>
+            <dependent idx="8">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="9">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="10">infectious</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">in</governor>
+            <dependent idx="11">mononucleosis</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">effective</governor>
+            <dependent idx="1">Cimetidine</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">effective</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="5">effective</governor>
+            <dependent idx="3">not</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">effective</governor>
+            <dependent idx="4">more</dependent>
+          </dep>
+          <dep type="prep_than">
+            <governor idx="5">effective</governor>
+            <dependent idx="7">placebo</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="9">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="10">infectious</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">placebo</governor>
+            <dependent idx="11">mononucleosis</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="5">effective</governor>
+            <dependent idx="1">Cimetidine</dependent>
+          </dep>
+          <dep type="cop">
+            <governor idx="5">effective</governor>
+            <dependent idx="2">is</dependent>
+          </dep>
+          <dep type="neg">
+            <governor idx="5">effective</governor>
+            <dependent idx="3">not</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="5">effective</governor>
+            <dependent idx="4">more</dependent>
+          </dep>
+          <dep type="prep_than">
+            <governor idx="5">effective</governor>
+            <dependent idx="7">placebo</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="9">acute</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">mononucleosis</governor>
+            <dependent idx="10">infectious</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">placebo</governor>
+            <dependent idx="11">mononucleosis</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

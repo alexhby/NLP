@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>A</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>double-blind</word>
+            <lemma>double-blind</lemma>
+            <CharacterOffsetBegin>2</CharacterOffsetBegin>
+            <CharacterOffsetEnd>14</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>comparison</word>
+            <lemma>comparison</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>bromperidol</word>
+            <lemma>bromperidol</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>haloperidol</word>
+            <lemma>haloperidol</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>57</CharacterOffsetBegin>
+            <CharacterOffsetEnd>59</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>newly</word>
+            <lemma>newly</lemma>
+            <CharacterOffsetBegin>60</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
+            <POS>RB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>admitted</word>
+            <lemma>admit</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>74</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>schizophrenic</word>
+            <lemma>schizophrenic</lemma>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>88</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>89</CharacterOffsetBegin>
+            <CharacterOffsetEnd>97</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>97</CharacterOffsetBegin>
+            <CharacterOffsetEnd>98</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (DT A) (JJ double-blind) (NN comparison)) (PP (IN of) (NP (NP (NN bromperidol) (CC and) (NN haloperidol)) (PP (IN in) (NP (RB newly) (VBN admitted) (JJ schizophrenic) (NNS patients))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="3">comparison</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">comparison</governor>
+            <dependent idx="2">double-blind</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">comparison</governor>
+            <dependent idx="4">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">of</governor>
+            <dependent idx="5">bromperidol</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="7">haloperidol</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="8">in</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="12">patients</governor>
+            <dependent idx="9">newly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="10">admitted</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="11">schizophrenic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">in</governor>
+            <dependent idx="12">patients</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="3">comparison</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">comparison</governor>
+            <dependent idx="2">double-blind</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="3">comparison</governor>
+            <dependent idx="5">bromperidol</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="7">haloperidol</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="12">patients</governor>
+            <dependent idx="9">newly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="10">admitted</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="11">schizophrenic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="12">patients</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="3">comparison</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="3">comparison</governor>
+            <dependent idx="2">double-blind</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="3">comparison</governor>
+            <dependent idx="5">bromperidol</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="3">comparison</governor>
+            <dependent idx="7">haloperidol</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="7">haloperidol</dependent>
+          </dep>
+          <dep type="advmod">
+            <governor idx="12">patients</governor>
+            <dependent idx="9">newly</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="10">admitted</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="12">patients</governor>
+            <dependent idx="11">schizophrenic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="5">bromperidol</governor>
+            <dependent idx="12">patients</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

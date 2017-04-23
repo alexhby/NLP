@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>A</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>tube</word>
+            <lemma>tube</lemma>
+            <CharacterOffsetBegin>2</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>spacer</word>
+            <lemma>spacer</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>improve</word>
+            <lemma>improve</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>inhalation</word>
+            <lemma>inhalation</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>drugs</word>
+            <lemma>drug</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>from</word>
+            <lemma>from</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>pressurized</word>
+            <lemma>pressurized</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>aerosols</word>
+            <lemma>aerosol</lemma>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (DT A) (NN tube) (NN spacer)) (VP (TO to) (VP (VB improve) (NP (NP (NN inhalation)) (PP (IN of) (NP (NNS drugs)))) (PP (IN from) (NP (JJ pressurized) (NNS aerosols))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="3">spacer</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">spacer</governor>
+            <dependent idx="2">tube</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improve</governor>
+            <dependent idx="3">spacer</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="5">improve</governor>
+            <dependent idx="4">to</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improve</governor>
+            <dependent idx="6">inhalation</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">inhalation</governor>
+            <dependent idx="7">of</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">of</governor>
+            <dependent idx="8">drugs</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="5">improve</governor>
+            <dependent idx="9">from</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">aerosols</governor>
+            <dependent idx="10">pressurized</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">from</governor>
+            <dependent idx="11">aerosols</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="3">spacer</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">spacer</governor>
+            <dependent idx="2">tube</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improve</governor>
+            <dependent idx="3">spacer</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="5">improve</governor>
+            <dependent idx="4">to</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improve</governor>
+            <dependent idx="6">inhalation</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">inhalation</governor>
+            <dependent idx="8">drugs</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">aerosols</governor>
+            <dependent idx="10">pressurized</dependent>
+          </dep>
+          <dep type="prep_from">
+            <governor idx="5">improve</governor>
+            <dependent idx="11">aerosols</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="3">spacer</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">spacer</governor>
+            <dependent idx="2">tube</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improve</governor>
+            <dependent idx="3">spacer</dependent>
+          </dep>
+          <dep type="aux">
+            <governor idx="5">improve</governor>
+            <dependent idx="4">to</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improve</governor>
+            <dependent idx="6">inhalation</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">inhalation</governor>
+            <dependent idx="8">drugs</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">aerosols</governor>
+            <dependent idx="10">pressurized</dependent>
+          </dep>
+          <dep type="prep_from">
+            <governor idx="5">improve</governor>
+            <dependent idx="11">aerosols</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

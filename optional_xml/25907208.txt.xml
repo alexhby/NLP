@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Effect</word>
+            <lemma>effect</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>cooling</word>
+            <lemma>cool</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>proparacaine</word>
+            <lemma>proparacaine</lemma>
+            <CharacterOffsetBegin>18</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>0.5</word>
+            <lemma>0.5</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>CD</POS>
+            <NER>PERCENT</NER>
+            <NormalizedNER>%0.5</NormalizedNER>
+          </token>
+          <token id="6">
+            <word>%</word>
+            <lemma>%</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>PERCENT</NER>
+            <NormalizedNER>%0.5</NormalizedNER>
+          </token>
+          <token id="7">
+            <word>eye</word>
+            <lemma>eye</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>drops</word>
+            <lemma>drop</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>on</word>
+            <lemma>on</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>patient</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>56</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>'s</word>
+            <lemma>'s</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>POS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>comfort</word>
+            <lemma>comfort</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>during</word>
+            <lemma>during</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="14">
+            <word>instillation</word>
+            <lemma>instillation</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="15">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>86</CharacterOffsetBegin>
+            <CharacterOffsetEnd>87</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NN Effect)) (PP (IN of) (S (VP (VBG cooling) (S (NP (NN proparacaine)) (NP (ADJP (CD 0.5) (NN %)) (NN eye))))))) (VP (VBZ drops) (PP (IN on) (NP (NP (NN patient) (POS 's)) (NN comfort))) (PP (IN during) (NP (NN instillation)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="8">drops</governor>
+            <dependent idx="1">Effect</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Effect</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="pcomp">
+            <governor idx="2">of</governor>
+            <dependent idx="3">cooling</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">eye</governor>
+            <dependent idx="4">proparacaine</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="6">%</governor>
+            <dependent idx="5">0.5</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">eye</governor>
+            <dependent idx="6">%</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="3">cooling</governor>
+            <dependent idx="7">eye</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">drops</governor>
+            <dependent idx="9">on</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="12">comfort</governor>
+            <dependent idx="10">patient</dependent>
+          </dep>
+          <dep type="possessive">
+            <governor idx="10">patient</governor>
+            <dependent idx="11">'s</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">on</governor>
+            <dependent idx="12">comfort</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="8">drops</governor>
+            <dependent idx="13">during</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="13">during</governor>
+            <dependent idx="14">instillation</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="8">drops</governor>
+            <dependent idx="1">Effect</dependent>
+          </dep>
+          <dep type="prepc_of">
+            <governor idx="1">Effect</governor>
+            <dependent idx="3">cooling</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">eye</governor>
+            <dependent idx="4">proparacaine</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="6">%</governor>
+            <dependent idx="5">0.5</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">eye</governor>
+            <dependent idx="6">%</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="3">cooling</governor>
+            <dependent idx="7">eye</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="12">comfort</governor>
+            <dependent idx="10">patient</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="8">drops</governor>
+            <dependent idx="12">comfort</dependent>
+          </dep>
+          <dep type="prep_during">
+            <governor idx="8">drops</governor>
+            <dependent idx="14">instillation</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="8">drops</governor>
+            <dependent idx="1">Effect</dependent>
+          </dep>
+          <dep type="prepc_of">
+            <governor idx="1">Effect</governor>
+            <dependent idx="3">cooling</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="7">eye</governor>
+            <dependent idx="4">proparacaine</dependent>
+          </dep>
+          <dep type="number">
+            <governor idx="6">%</governor>
+            <dependent idx="5">0.5</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">eye</governor>
+            <dependent idx="6">%</dependent>
+          </dep>
+          <dep type="xcomp">
+            <governor idx="3">cooling</governor>
+            <dependent idx="7">eye</dependent>
+          </dep>
+          <dep type="poss">
+            <governor idx="12">comfort</governor>
+            <dependent idx="10">patient</dependent>
+          </dep>
+          <dep type="prep_on">
+            <governor idx="8">drops</governor>
+            <dependent idx="12">comfort</dependent>
+          </dep>
+          <dep type="prep_during">
+            <governor idx="8">drops</governor>
+            <dependent idx="14">instillation</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

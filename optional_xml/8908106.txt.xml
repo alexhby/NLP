@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Ganciclovir</word>
+            <lemma>Ganciclovir</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>use</word>
+            <lemma>use</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>during</word>
+            <lemma>during</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>mild</word>
+            <lemma>mild</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>renal</word>
+            <lemma>renal</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>failure</word>
+            <lemma>failure</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>heart</word>
+            <lemma>heart</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>transplantation</word>
+            <lemma>transplantation</lemma>
+            <CharacterOffsetBegin>51</CharacterOffsetBegin>
+            <CharacterOffsetEnd>66</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>66</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NNP Ganciclovir) (NN use)) (PP (IN during) (NP (JJ mild) (JJ renal) (NN failure))) (PP (IN in) (NP (NN heart) (NN transplantation))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">use</governor>
+            <dependent idx="1">Ganciclovir</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">use</governor>
+            <dependent idx="3">during</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="4">mild</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="5">renal</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">during</governor>
+            <dependent idx="6">failure</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">use</governor>
+            <dependent idx="7">in</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">transplantation</governor>
+            <dependent idx="8">heart</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="7">in</governor>
+            <dependent idx="9">transplantation</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">use</governor>
+            <dependent idx="1">Ganciclovir</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="4">mild</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="5">renal</dependent>
+          </dep>
+          <dep type="prep_during">
+            <governor idx="2">use</governor>
+            <dependent idx="6">failure</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">transplantation</governor>
+            <dependent idx="8">heart</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">use</governor>
+            <dependent idx="9">transplantation</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">use</governor>
+            <dependent idx="1">Ganciclovir</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="4">mild</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="6">failure</governor>
+            <dependent idx="5">renal</dependent>
+          </dep>
+          <dep type="prep_during">
+            <governor idx="2">use</governor>
+            <dependent idx="6">failure</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="9">transplantation</governor>
+            <dependent idx="8">heart</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">use</governor>
+            <dependent idx="9">transplantation</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

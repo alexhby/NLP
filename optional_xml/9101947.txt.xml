@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>Laparoscopic</word>
+            <lemma>laparoscopic</lemma>
+            <CharacterOffsetBegin>1</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>conventional</word>
+            <lemma>conventional</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>29</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>inguinal</word>
+            <lemma>inguinal</lemma>
+            <CharacterOffsetBegin>30</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>hernia</word>
+            <lemma>hernia</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>repair</word>
+            <lemma>repair</lemma>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>57</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>or</word>
+            <lemma>or</lemma>
+            <CharacterOffsetBegin>58</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>without</word>
+            <lemma>without</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>implant</word>
+            <lemma>implant</lemma>
+            <CharacterOffsetBegin>69</CharacterOffsetBegin>
+            <CharacterOffsetEnd>76</CharacterOffsetEnd>
+            <POS>VBP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>76</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (-LRB- -LRB-) (NP (NP (JJ Laparoscopic)) (CC or) (NP (JJ conventional) (JJ inguinal) (NN hernia) (NN repair))) (PP (PP (IN with)) (CC or) (PP (IN without))) (VP (VBP implant)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">implant</governor>
+            <dependent idx="2">Laparoscopic</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="2">Laparoscopic</governor>
+            <dependent idx="3">or</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="4">conventional</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="5">inguinal</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">repair</governor>
+            <dependent idx="6">hernia</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="2">Laparoscopic</governor>
+            <dependent idx="7">repair</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">implant</governor>
+            <dependent idx="8">with</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="8">with</governor>
+            <dependent idx="9">or</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="8">with</governor>
+            <dependent idx="10">without</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">implant</governor>
+            <dependent idx="2">Laparoscopic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="4">conventional</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="5">inguinal</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">repair</governor>
+            <dependent idx="6">hernia</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="2">Laparoscopic</governor>
+            <dependent idx="7">repair</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">implant</governor>
+            <dependent idx="8">with</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="8">with</governor>
+            <dependent idx="10">without</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="11">implant</governor>
+            <dependent idx="2">Laparoscopic</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="4">conventional</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">repair</governor>
+            <dependent idx="5">inguinal</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="7">repair</governor>
+            <dependent idx="6">hernia</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="2">Laparoscopic</governor>
+            <dependent idx="7">repair</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="11">implant</governor>
+            <dependent idx="7">repair</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">implant</governor>
+            <dependent idx="8">with</dependent>
+          </dep>
+          <dep type="conj_or">
+            <governor idx="8">with</governor>
+            <dependent idx="10">without</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="11">implant</governor>
+            <dependent idx="10">without</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+      <sentence id="2">
+        <tokens>
+          <token id="1">
+            <word>A</word>
+            <lemma>a</lemma>
+            <CharacterOffsetBegin>78</CharacterOffsetBegin>
+            <CharacterOffsetEnd>79</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>prospective</word>
+            <lemma>prospective</lemma>
+            <CharacterOffsetBegin>80</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>randomized</word>
+            <lemma>randomized</lemma>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>102</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>study</word>
+            <lemma>study</lemma>
+            <CharacterOffsetBegin>103</CharacterOffsetBegin>
+            <CharacterOffsetEnd>108</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>108</CharacterOffsetBegin>
+            <CharacterOffsetEnd>109</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>109</CharacterOffsetBegin>
+            <CharacterOffsetEnd>110</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (VP (NP (DT A) (NP (JJ prospective) (JJ randomized) (NN study) (-RRB- -RRB-)))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="2">prospective</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">randomized</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="2">prospective</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">randomized</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="det">
+            <governor idx="4">study</governor>
+            <dependent idx="1">A</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="2">prospective</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">study</governor>
+            <dependent idx="3">randomized</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

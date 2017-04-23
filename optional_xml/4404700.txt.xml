@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Auditory</word>
+            <lemma>auditory</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>signal</word>
+            <lemma>signal</lemma>
+            <CharacterOffsetBegin>9</CharacterOffsetBegin>
+            <CharacterOffsetEnd>15</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>detection</word>
+            <lemma>detection</lemma>
+            <CharacterOffsetBegin>16</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>28</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>paranoid</word>
+            <lemma>paranoid</lemma>
+            <CharacterOffsetBegin>29</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>41</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>nonparanoid</word>
+            <lemma>nonparanoid</lemma>
+            <CharacterOffsetBegin>42</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>schizophrenics</word>
+            <lemma>schizophrenic</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>68</CharacterOffsetBegin>
+            <CharacterOffsetEnd>69</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (JJ Auditory) (NN signal) (NN detection)) (PP (IN in) (NP (ADJP (JJ paranoid) (CC and) (JJ nonparanoid)) (NNS schizophrenics))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="3">detection</governor>
+            <dependent idx="1">Auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">detection</governor>
+            <dependent idx="2">signal</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">detection</governor>
+            <dependent idx="4">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">schizophrenics</governor>
+            <dependent idx="5">paranoid</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="5">paranoid</governor>
+            <dependent idx="6">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="5">paranoid</governor>
+            <dependent idx="7">nonparanoid</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">in</governor>
+            <dependent idx="8">schizophrenics</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="3">detection</governor>
+            <dependent idx="1">Auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">detection</governor>
+            <dependent idx="2">signal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">schizophrenics</governor>
+            <dependent idx="5">paranoid</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">paranoid</governor>
+            <dependent idx="7">nonparanoid</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">detection</governor>
+            <dependent idx="8">schizophrenics</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="3">detection</governor>
+            <dependent idx="1">Auditory</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="3">detection</governor>
+            <dependent idx="2">signal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">schizophrenics</governor>
+            <dependent idx="5">paranoid</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="5">paranoid</governor>
+            <dependent idx="7">nonparanoid</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">schizophrenics</governor>
+            <dependent idx="7">nonparanoid</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="3">detection</governor>
+            <dependent idx="8">schizophrenics</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

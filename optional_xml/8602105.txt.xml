@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Concentration</word>
+            <lemma>concentration</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>inhaled</word>
+            <lemma>inhale</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>amiloride</word>
+            <lemma>amiloride</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>37</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>cystic</word>
+            <lemma>cystic</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>fibrosis</word>
+            <lemma>fibrosis</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>54</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NN Concentration)) (PP (IN of))) (VP (VBN inhaled) (NP (NP (NN amiloride)) (PP (IN in) (NP (JJ cystic) (NN fibrosis))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nsubj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="1">Concentration</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Concentration</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="4">amiloride</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">amiloride</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">fibrosis</governor>
+            <dependent idx="6">cystic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">in</governor>
+            <dependent idx="7">fibrosis</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nsubj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="1">Concentration</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Concentration</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="4">amiloride</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">fibrosis</governor>
+            <dependent idx="6">cystic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">amiloride</governor>
+            <dependent idx="7">fibrosis</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nsubj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="1">Concentration</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Concentration</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="3">inhaled</governor>
+            <dependent idx="4">amiloride</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">fibrosis</governor>
+            <dependent idx="6">cystic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="4">amiloride</governor>
+            <dependent idx="7">fibrosis</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Cranberry</word>
+            <lemma>cranberry</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>concentrate</word>
+            <lemma>concentrate</lemma>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>UTI</word>
+            <lemma>utus</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>ORGANIZATION</NER>
+          </token>
+          <token id="5">
+            <word>prophylaxis</word>
+            <lemma>prophylaxis</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>38</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Cranberry) (NN concentrate)) (: :) (NP (NN UTI) (NN prophylaxis)) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="1">Cranberry</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">UTI</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="1">Cranberry</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">UTI</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="1">Cranberry</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="5">prophylaxis</governor>
+            <dependent idx="4">UTI</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">concentrate</governor>
+            <dependent idx="5">prophylaxis</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Should</word>
+            <lemma>should</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>6</CharacterOffsetEnd>
+            <POS>MD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>angioplasty</word>
+            <lemma>angioplasty</lemma>
+            <CharacterOffsetBegin>7</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>be</word>
+            <lemma>be</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>21</CharacterOffsetEnd>
+            <POS>VB</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>deferred</word>
+            <lemma>defer</lemma>
+            <CharacterOffsetBegin>22</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>VBN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>infarction</word>
+            <lemma>infarction</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>47</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>?</word>
+            <lemma>?</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>48</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (VP (MD Should) (VP (VB angioplasty) (VP (VB be) (VP (VBN deferred) (PP (IN after) (NP (NN infarction))))))) (. ?))) </parse>
+        <basic-dependencies>
+          <dep type="aux">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">deferred</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="4">deferred</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">deferred</governor>
+            <dependent idx="5">after</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">after</governor>
+            <dependent idx="6">infarction</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="aux">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">deferred</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="4">deferred</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="4">deferred</governor>
+            <dependent idx="6">infarction</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="aux">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="1">Should</dependent>
+          </dep>
+          <dep type="auxpass">
+            <governor idx="4">deferred</governor>
+            <dependent idx="3">be</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">angioplasty</governor>
+            <dependent idx="4">deferred</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="4">deferred</governor>
+            <dependent idx="6">infarction</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

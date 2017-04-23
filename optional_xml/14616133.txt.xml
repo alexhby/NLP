@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Mometasone</word>
+            <lemma>mometasone</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>furoate</word>
+            <lemma>furoate</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>nasal</word>
+            <lemma>nasal</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>spray</word>
+            <lemma>spray</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>improves</word>
+            <lemma>improve</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>VBZ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>olfactory</word>
+            <lemma>olfactory</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>performance</word>
+            <lemma>performance</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>seasonal</word>
+            <lemma>seasonal</lemma>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>allergic</word>
+            <lemma>allergic</lemma>
+            <CharacterOffsetBegin>74</CharacterOffsetBegin>
+            <CharacterOffsetEnd>82</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>rhinitis</word>
+            <lemma>rhinitis</lemma>
+            <CharacterOffsetBegin>83</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>91</CharacterOffsetBegin>
+            <CharacterOffsetEnd>92</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NP (NN Mometasone) (NN furoate)) (NP (JJ nasal) (NN spray))) (VP (VBZ improves) (NP (NP (JJ olfactory) (NN performance)) (PP (IN in) (NP (JJ seasonal) (JJ allergic) (NN rhinitis))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">furoate</governor>
+            <dependent idx="1">Mometasone</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improves</governor>
+            <dependent idx="2">furoate</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">spray</governor>
+            <dependent idx="3">nasal</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">furoate</governor>
+            <dependent idx="4">spray</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">performance</governor>
+            <dependent idx="6">olfactory</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improves</governor>
+            <dependent idx="7">performance</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="7">performance</governor>
+            <dependent idx="8">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="9">seasonal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="10">allergic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="8">in</governor>
+            <dependent idx="11">rhinitis</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">furoate</governor>
+            <dependent idx="1">Mometasone</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improves</governor>
+            <dependent idx="2">furoate</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">spray</governor>
+            <dependent idx="3">nasal</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">furoate</governor>
+            <dependent idx="4">spray</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">performance</governor>
+            <dependent idx="6">olfactory</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improves</governor>
+            <dependent idx="7">performance</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="9">seasonal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="10">allergic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">performance</governor>
+            <dependent idx="11">rhinitis</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">furoate</governor>
+            <dependent idx="1">Mometasone</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="5">improves</governor>
+            <dependent idx="2">furoate</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">spray</governor>
+            <dependent idx="3">nasal</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="2">furoate</governor>
+            <dependent idx="4">spray</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">performance</governor>
+            <dependent idx="6">olfactory</dependent>
+          </dep>
+          <dep type="dobj">
+            <governor idx="5">improves</governor>
+            <dependent idx="7">performance</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="9">seasonal</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">rhinitis</governor>
+            <dependent idx="10">allergic</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="7">performance</governor>
+            <dependent idx="11">rhinitis</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

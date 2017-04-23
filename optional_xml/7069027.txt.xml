@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Perception</word>
+            <lemma>perception</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>10</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>11</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>social</word>
+            <lemma>social</lemma>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>20</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>interactions</word>
+            <lemma>interaction</lemma>
+            <CharacterOffsetBegin>21</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>34</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>depressed</word>
+            <lemma>depressed</lemma>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>46</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>psychiatric</word>
+            <lemma>psychiatric</lemma>
+            <CharacterOffsetBegin>47</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>patients</word>
+            <lemma>patient</lemma>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Perception)) (PP (IN of) (NP (JJ social) (NNS interactions))) (PP (IN in) (NP (JJ depressed) (JJ psychiatric) (NNS patients))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Perception</governor>
+            <dependent idx="2">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">interactions</governor>
+            <dependent idx="3">social</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">of</governor>
+            <dependent idx="4">interactions</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="1">Perception</governor>
+            <dependent idx="5">in</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="6">depressed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="7">psychiatric</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">in</governor>
+            <dependent idx="8">patients</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="4">interactions</governor>
+            <dependent idx="3">social</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Perception</governor>
+            <dependent idx="4">interactions</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="6">depressed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="7">psychiatric</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Perception</governor>
+            <dependent idx="8">patients</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="4">interactions</governor>
+            <dependent idx="3">social</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="1">Perception</governor>
+            <dependent idx="4">interactions</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="6">depressed</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="8">patients</governor>
+            <dependent idx="7">psychiatric</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="1">Perception</governor>
+            <dependent idx="8">patients</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

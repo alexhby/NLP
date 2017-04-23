@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>New</word>
+            <lemma>New</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>3</CharacterOffsetEnd>
+            <POS>NNP</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>methods</word>
+            <lemma>method</lemma>
+            <CharacterOffsetBegin>4</CharacterOffsetBegin>
+            <CharacterOffsetEnd>11</CharacterOffsetEnd>
+            <POS>NNS</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>applied</word>
+            <lemma>apply</lemma>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>19</CharacterOffsetEnd>
+            <POS>VBD</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>to</word>
+            <lemma>to</lemma>
+            <CharacterOffsetBegin>20</CharacterOffsetBegin>
+            <CharacterOffsetEnd>22</CharacterOffsetEnd>
+            <POS>TO</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>the</word>
+            <lemma>the</lemma>
+            <CharacterOffsetBegin>23</CharacterOffsetBegin>
+            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <POS>DT</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>analysis</word>
+            <lemma>analysis</lemma>
+            <CharacterOffsetBegin>27</CharacterOffsetBegin>
+            <CharacterOffsetEnd>35</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>36</CharacterOffsetBegin>
+            <CharacterOffsetEnd>39</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>40</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>of</word>
+            <lemma>of</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>52</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>ovarian</word>
+            <lemma>ovarian</lemma>
+            <CharacterOffsetBegin>53</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>cancer</word>
+            <lemma>cancer</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>67</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>67</CharacterOffsetBegin>
+            <CharacterOffsetEnd>68</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (S (NP (NNP New) (NNS methods)) (VP (VBD applied) (PP (TO to) (NP (NP (DT the) (NN analysis) (CC and) (NN treatment)) (PP (IN of) (NP (JJ ovarian) (NN cancer)))))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">methods</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">applied</governor>
+            <dependent idx="2">methods</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="3">applied</governor>
+            <dependent idx="4">to</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">analysis</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="4">to</governor>
+            <dependent idx="6">analysis</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="6">analysis</governor>
+            <dependent idx="7">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="6">analysis</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">analysis</governor>
+            <dependent idx="9">of</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cancer</governor>
+            <dependent idx="10">ovarian</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">of</governor>
+            <dependent idx="11">cancer</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">methods</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">applied</governor>
+            <dependent idx="2">methods</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">analysis</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="3">applied</governor>
+            <dependent idx="6">analysis</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">analysis</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cancer</governor>
+            <dependent idx="10">ovarian</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">analysis</governor>
+            <dependent idx="11">cancer</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">methods</governor>
+            <dependent idx="1">New</dependent>
+          </dep>
+          <dep type="nsubj">
+            <governor idx="3">applied</governor>
+            <dependent idx="2">methods</dependent>
+          </dep>
+          <dep type="det">
+            <governor idx="6">analysis</governor>
+            <dependent idx="5">the</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="3">applied</governor>
+            <dependent idx="6">analysis</dependent>
+          </dep>
+          <dep type="prep_to">
+            <governor idx="3">applied</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">analysis</governor>
+            <dependent idx="8">treatment</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cancer</governor>
+            <dependent idx="10">ovarian</dependent>
+          </dep>
+          <dep type="prep_of">
+            <governor idx="6">analysis</governor>
+            <dependent idx="11">cancer</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

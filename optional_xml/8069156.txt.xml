@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Bronchodilator</word>
+            <lemma>bronchodilator</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>14</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>treatment</word>
+            <lemma>treatment</lemma>
+            <CharacterOffsetBegin>15</CharacterOffsetBegin>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>in</word>
+            <lemma>in</lemma>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>asthma</word>
+            <lemma>asthma</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>38</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>bronchitis</word>
+            <lemma>bronchitis</lemma>
+            <CharacterOffsetBegin>39</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>49</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NN Bronchodilator) (NN treatment)) (PP (IN in) (NP (NN asthma) (CC and) (NN bronchitis))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="nn">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Bronchodilator</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="2">treatment</governor>
+            <dependent idx="3">in</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="3">in</governor>
+            <dependent idx="4">asthma</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="4">asthma</governor>
+            <dependent idx="5">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="4">asthma</governor>
+            <dependent idx="6">bronchitis</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="nn">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Bronchodilator</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">treatment</governor>
+            <dependent idx="4">asthma</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">asthma</governor>
+            <dependent idx="6">bronchitis</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="nn">
+            <governor idx="2">treatment</governor>
+            <dependent idx="1">Bronchodilator</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">treatment</governor>
+            <dependent idx="4">asthma</dependent>
+          </dep>
+          <dep type="prep_in">
+            <governor idx="2">treatment</governor>
+            <dependent idx="6">bronchitis</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="4">asthma</governor>
+            <dependent idx="6">bronchitis</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

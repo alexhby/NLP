@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>Chemotherapy</word>
+            <lemma>chemotherapy</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>for</word>
+            <lemma>for</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>16</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>metastatic</word>
+            <lemma>metastatic</lemma>
+            <CharacterOffsetBegin>17</CharacterOffsetBegin>
+            <CharacterOffsetEnd>27</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>NSCLC</word>
+            <lemma>nsclc</lemma>
+            <CharacterOffsetBegin>28</CharacterOffsetBegin>
+            <CharacterOffsetEnd>33</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>:</word>
+            <lemma>:</lemma>
+            <CharacterOffsetBegin>33</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>:</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>current</word>
+            <lemma>current</lemma>
+            <CharacterOffsetBegin>35</CharacterOffsetBegin>
+            <CharacterOffsetEnd>42</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>DATE</NER>
+            <NormalizedNER>PRESENT_REF</NormalizedNER>
+            <Timex tid="t1" type="DATE">PRESENT_REF</Timex>
+          </token>
+          <token id="7">
+            <word>status</word>
+            <lemma>status</lemma>
+            <CharacterOffsetBegin>43</CharacterOffsetBegin>
+            <CharacterOffsetEnd>49</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>future</word>
+            <lemma>future</lemma>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>60</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>direction</word>
+            <lemma>direction</lemma>
+            <CharacterOffsetBegin>61</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>70</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (NP (NP (NN Chemotherapy)) (PP (IN for) (NP (JJ metastatic) (NN NSCLC)))) (: :) (NP (NP (JJ current) (NN status)) (CC and) (NP (JJ future) (NN direction))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="prep">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="2">for</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="4">NSCLC</governor>
+            <dependent idx="3">metastatic</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="2">for</governor>
+            <dependent idx="4">NSCLC</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">status</governor>
+            <dependent idx="6">current</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="7">status</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="7">status</governor>
+            <dependent idx="8">and</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">direction</governor>
+            <dependent idx="9">future</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="7">status</governor>
+            <dependent idx="10">direction</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="4">NSCLC</governor>
+            <dependent idx="3">metastatic</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="4">NSCLC</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">status</governor>
+            <dependent idx="6">current</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="7">status</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">direction</governor>
+            <dependent idx="9">future</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">status</governor>
+            <dependent idx="10">direction</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="4">NSCLC</governor>
+            <dependent idx="3">metastatic</dependent>
+          </dep>
+          <dep type="prep_for">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="4">NSCLC</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="7">status</governor>
+            <dependent idx="6">current</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="7">status</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="10">direction</governor>
+            <dependent idx="9">future</dependent>
+          </dep>
+          <dep type="dep">
+            <governor idx="1">Chemotherapy</governor>
+            <dependent idx="10">direction</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="7">status</governor>
+            <dependent idx="10">direction</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="CoreNLP-to-HTML.xsl" type="text/xsl"?>
+<root>
+  <document>
+    <sentences>
+      <sentence id="1">
+        <tokens>
+          <token id="1">
+            <word>-LRB-</word>
+            <lemma>-lrb-</lemma>
+            <CharacterOffsetBegin>0</CharacterOffsetBegin>
+            <CharacterOffsetEnd>1</CharacterOffsetEnd>
+            <POS>-LRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="2">
+            <word>Maintaining</word>
+            <lemma>maintain</lemma>
+            <CharacterOffsetBegin>1</CharacterOffsetBegin>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
+            <POS>VBG</POS>
+            <NER>O</NER>
+          </token>
+          <token id="3">
+            <word>sinus</word>
+            <lemma>sinus</lemma>
+            <CharacterOffsetBegin>13</CharacterOffsetBegin>
+            <CharacterOffsetEnd>18</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="4">
+            <word>rhythm</word>
+            <lemma>rhythm</lemma>
+            <CharacterOffsetBegin>19</CharacterOffsetBegin>
+            <CharacterOffsetEnd>25</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="5">
+            <word>with</word>
+            <lemma>with</lemma>
+            <CharacterOffsetBegin>26</CharacterOffsetBegin>
+            <CharacterOffsetEnd>30</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="6">
+            <word>quinidine</word>
+            <lemma>quinidine</lemma>
+            <CharacterOffsetBegin>31</CharacterOffsetBegin>
+            <CharacterOffsetEnd>40</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="7">
+            <word>and</word>
+            <lemma>and</lemma>
+            <CharacterOffsetBegin>41</CharacterOffsetBegin>
+            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <POS>CC</POS>
+            <NER>O</NER>
+          </token>
+          <token id="8">
+            <word>amiodarone</word>
+            <lemma>amiodarone</lemma>
+            <CharacterOffsetBegin>45</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="9">
+            <word>after</word>
+            <lemma>after</lemma>
+            <CharacterOffsetBegin>56</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>IN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="10">
+            <word>electric</word>
+            <lemma>electric</lemma>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>70</CharacterOffsetEnd>
+            <POS>JJ</POS>
+            <NER>O</NER>
+          </token>
+          <token id="11">
+            <word>cardioversion</word>
+            <lemma>cardioversion</lemma>
+            <CharacterOffsetBegin>71</CharacterOffsetBegin>
+            <CharacterOffsetEnd>84</CharacterOffsetEnd>
+            <POS>NN</POS>
+            <NER>O</NER>
+          </token>
+          <token id="12">
+            <word>-RRB-</word>
+            <lemma>-rrb-</lemma>
+            <CharacterOffsetBegin>84</CharacterOffsetBegin>
+            <CharacterOffsetEnd>85</CharacterOffsetEnd>
+            <POS>-RRB-</POS>
+            <NER>O</NER>
+          </token>
+          <token id="13">
+            <word>.</word>
+            <lemma>.</lemma>
+            <CharacterOffsetBegin>85</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>.</POS>
+            <NER>O</NER>
+          </token>
+        </tokens>
+        <parse>(ROOT (NP (-LRB- -LRB-) (NP (VBG Maintaining) (NN sinus) (NN rhythm)) (PP (IN with) (NP (NP (NN quinidine) (CC and) (NN amiodarone)) (PP (IN after) (NP (JJ electric) (NN cardioversion))) (-RRB- -RRB-))) (. .))) </parse>
+        <basic-dependencies>
+          <dep type="amod">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="2">Maintaining</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="3">sinus</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="5">with</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="5">with</governor>
+            <dependent idx="6">quinidine</dependent>
+          </dep>
+          <dep type="cc">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="7">and</dependent>
+          </dep>
+          <dep type="conj">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="8">amiodarone</dependent>
+          </dep>
+          <dep type="prep">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="9">after</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cardioversion</governor>
+            <dependent idx="10">electric</dependent>
+          </dep>
+          <dep type="pobj">
+            <governor idx="9">after</governor>
+            <dependent idx="11">cardioversion</dependent>
+          </dep>
+        </basic-dependencies>
+        <collapsed-dependencies>
+          <dep type="amod">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="2">Maintaining</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="3">sinus</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="6">quinidine</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="8">amiodarone</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cardioversion</governor>
+            <dependent idx="10">electric</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="11">cardioversion</dependent>
+          </dep>
+        </collapsed-dependencies>
+        <collapsed-ccprocessed-dependencies>
+          <dep type="amod">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="2">Maintaining</dependent>
+          </dep>
+          <dep type="nn">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="3">sinus</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="6">quinidine</dependent>
+          </dep>
+          <dep type="prep_with">
+            <governor idx="4">rhythm</governor>
+            <dependent idx="8">amiodarone</dependent>
+          </dep>
+          <dep type="conj_and">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="8">amiodarone</dependent>
+          </dep>
+          <dep type="amod">
+            <governor idx="11">cardioversion</governor>
+            <dependent idx="10">electric</dependent>
+          </dep>
+          <dep type="prep_after">
+            <governor idx="6">quinidine</governor>
+            <dependent idx="11">cardioversion</dependent>
+          </dep>
+        </collapsed-ccprocessed-dependencies>
+      </sentence>
+    </sentences>
+  </document>
+</root>
