@@ -555,12 +555,12 @@ if __name__ == "__main__":
 	syn_feat_train = np.load(npy_folder + "syn_train.npy")
 	clu_feat_train = np.load(npy_folder + "clu_train.npy")
 
-	X_train = np.concatenate(
-        (pos_feat_train, uni_feat_train, ner_feat_train, dep_feat_train, syn_feat_train, clu_feat_train), axis = 1)
+	# X_train = np.concatenate(
+ #        (pos_feat_train, uni_feat_train, ner_feat_train, dep_feat_train, syn_feat_train, clu_feat_train), axis = 1)
 	# X_test = np.concatenate(
  #        (pos_feat_test, uni_feat_test, ner_feat_test, dep_feat_test, syn_feat_test, clu_feat_test), axis = 1)
 
-	# X_train = ner_feat_train
+	X_train = clu_feat_train
 
 	# train_file_list = sorted(listdir(train_xml_path), key = lambda x : int(x.split('.')[0].split('_')[-1]))
 
@@ -577,6 +577,6 @@ if __name__ == "__main__":
 	# clf = SVC(C = 5, kernel = 'linear')
 	# scores = cross_val_score(clf, X_train, train_score_list, cv = 5)
 
-	scores = cross_valid_with_spearman(X_train, train_score_list, 3)
+	scores = cross_valid_with_spearman(X_train, train_score_list, 5)
 	# print scores
 	print("Accuracy: %0.3f (+/- %0.3f)" % (scores.mean(), scores.std() * 2))

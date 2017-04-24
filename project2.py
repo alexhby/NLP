@@ -474,6 +474,10 @@ def createBigramFeat(doc_dir, top_k_bigrams_list):
 	return np.array(result)
 
 
+####################### tf-idf
+
+
+
 
 
 ###########################################################################
@@ -505,17 +509,18 @@ if __name__ == "__main__":
 	# 	ptb_google_mapping[ptb] = uni
 	# universal_tag_list = sorted(list(set(ptb_google_mapping.values())))
 
-	# pos_tag_list = extract_pos_tags(train_xml_path)
+	pos_tag_list = extract_pos_tags(train_xml_path)
 	# entity_list = extract_ner_tags(train_xml_path)
 	# dependency_list = extract_dependencies(train_xml_path)
-	# rules_list = extract_prod_rules(train_xml_path)
+	rules_list = extract_prod_rules(train_xml_path)
 	# cluster_code_list = generate_cluster_codes(brown_file_path)
 	# word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
-	# pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
+
+	pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
 	# uni_feat_train = createUniversalPOSFeat(pos_feat_train, pos_tag_list, ptb_google_mapping, universal_tag_list)
 	# ner_feat_train = createNERFeat(train_xml_path, entity_list)
 	# dep_feat_train = createDependencyFeat(train_xml_path, dependency_list)
-	# syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
+	syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
 	# clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
 
 
@@ -523,26 +528,27 @@ if __name__ == "__main__":
 	train_path = "./train_split/"
 	test_path = "./test_split/"
 
-	# top_k_unigrams_list = extract_top_k_unigrams(train_path, 4000)
+	# top_k_unigrams_list = extract_top_k_unigrams(train_path, 5000)
 	# unigram_feat_train = createUnigramFeat(train_path, top_k_unigrams_list)
 	# unigram_feat_test = createUnigramFeat(test_path, top_k_unigrams_list)
 	# np.save("./npy_files/unigram_train", unigram_feat_train)
 	# np.save("./npy_files/unigram_test", unigram_feat_test)
 
-	top_k_bigrams_list = extract_top_k_bigrams(train_path, 4500)
-	bigram_feat_train = createBigramFeat(train_path, top_k_bigrams_list)
+	# top_k_bigrams_list = extract_top_k_bigrams(train_path, 4500)
+	# bigram_feat_train = createBigramFeat(train_path, top_k_bigrams_list)
 	# bigram_feat_test = createBigramFeat(test_path, top_k_bigrams_list)
-	np.save("./npy_files/bigram_train", bigram_feat_train)
+	# np.save("./npy_files/bigram_train", bigram_feat_train)
 	# np.save("./npy_files/bigram_test", bigram_feat_test)
 
-	feat_train = bigram_feat_train
-
+	# feat_train = unigram_feat_train
+	feat_train = np.concatenate((pos_feat_train, syn_feat_train), axis = 1)
 
 
 	# reg = SVR(C = 5, kernel = 'linear')
 	# reg = LogisticRegression(penalty = 'l1', C = 1, max_iter = 300, solver = 'liblinear', multi_class = 'ovr') 
 
-	reg = BayesianRidge()
+	# reg = BayesianRidge()
+	reg = BayesianRidge(normalize = True)
 
 	scores = []
 	total_num = 461
