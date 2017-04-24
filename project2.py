@@ -15,6 +15,10 @@ from sklearn.metrics import make_scorer
 from sklearn.model_selection import cross_val_score
 from sklearn.svm import SVC, SVR
 from random import sample
+import pickle
+import operator
+from collections import defaultdict
+
 
 ####################### PART 1 - PREPARATION ############################
 
@@ -476,9 +480,90 @@ def createBigramFeat(doc_dir, top_k_bigrams_list):
 
 ####################### tf-idf
 
+def flatten(listoflists):
+	return [item for sublist in listoflists for item in sublist]
+
+## sample: a list of standardized excerpts
+def get_tf(sample):
+	return dict(FreqDist(flatten(sample))) # return tf dict
+
+## corpus: a list of standardized excerpts
+def get_idf(corpus):
+	df_dict = defaultdict(int)
+	for excerpt in corpus:
+		for word in set(excerpt):
+			df_dict[word] += 1
+	n = float(len(corpus))
+	idf_dict = {}
+	for word in df_dict:
+		idf_dict[word] = np.log(n / df_dict[word])
+	return idf_dict
+
+def get_tfidf(tf_dict, idf_dict):
+	d = {}
+	for word in tf_dict:
+		if word in idf_dict:
+			d[word] = tf_dict[word] * idf_dict[word]
+	return d
+
+def get_tfidf_weights_topk(tf_dict, idf_dict, k):
+	d = get_tfidf(tf_dict, idf_dict)
+	lst = sorted(d.items(), key=operator.itemgetter(1), reverse=True)
+	return lst[0:k]
+
+## pickle
+def save_idf(idf_dict):
+	pickle.dump(idf_dict, open("idf.p", "wb"), True)
+	return
+
+def load_idf(corpus):
+	if os.path.isfile("idf.p") and os.stat("idf.p").st_size != 0:
+		idf_dict = pickle.load(open("idf.p", "rb")) # if already pickled, deserialize
+	else:
+		idf_dict = get_idf(corpus)
+		save_idf(idf_dict)
+	return idf_dict
+
+def create_feature_space(wordlist):
+	index = 0
+	d = {}
+	for word in wordlist:
+		if word not in d:
+			d[word] = index
+			index += 1
+	return d
+
+def vectorize_tfidf(feature_space, idf_dict, sample):
+	tfidf_dict = get_tfidf(get_tf(sample), idf_dict)
+	vector = [0] * len(feature_space)
+	for word in feature_space:
+		if word in tfidf_dict:
+			vector[feature_space[word]] = tfidf_dict[word]
+	return vector
+
+## create the feature matrix
+def create_tfidf_feat(excerpt_list):
+	corpus = []
+	for excerpt in excerpt_list:
+		corpus.append(tokenize_excerpt(excerpt))
+	corpus_idf_dict = load_idf(corpus)
+	corpus_tf_dict = get_tf(corpus)
+	corpus_tfidf_list = get_tfidf_weights_topk(corpus_tf_dict, corpus_idf_dict, 1000)
+	
+	corpus_wordlist = []
+	for item in corpus_tfidf_list:
+		corpus_wordlist.append(item[0])
+	matrix = []
+	for excerpt in excerpt_list:
+		sample = []
+		for sent in sent_tokenize(excerpt):
+			sample.append(word_tokenize(sent))
+		matrix.append(vectorize_tfidf(create_feature_space(corpus_wordlist), corpus_idf_dict, sample))
+	return matrix
 
 
 
+## def get_tfidf_vector(excerpt_list, k)
 
 ###########################################################################
 
@@ -509,26 +594,48 @@ if __name__ == "__main__":
 	# 	ptb_google_mapping[ptb] = uni
 	# universal_tag_list = sorted(list(set(ptb_google_mapping.values())))
 
-	pos_tag_list = extract_pos_tags(train_xml_path)
+	# pos_tag_list = extract_pos_tags(train_xml_path)
 	# entity_list = extract_ner_tags(train_xml_path)
 	# dependency_list = extract_dependencies(train_xml_path)
-	rules_list = extract_prod_rules(train_xml_path)
+	# rules_list = extract_prod_rules(train_xml_path)
 	# cluster_code_list = generate_cluster_codes(brown_file_path)
 	# word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
 
-	pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
+	# pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
 	# uni_feat_train = createUniversalPOSFeat(pos_feat_train, pos_tag_list, ptb_google_mapping, universal_tag_list)
 	# ner_feat_train = createNERFeat(train_xml_path, entity_list)
 	# dep_feat_train = createDependencyFeat(train_xml_path, dependency_list)
-	syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
+	# syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
 	# clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
 
+	npy_folder = "./npy_files/"
+	## serilize
+	# np.save(npy_folder + "pos_train", pos_feat_train)
+	# np.save(npy_folder + "pos_test", pos_feat_test)
+	# np.save(npy_folder + "uni_train", uni_feat_train)
+	# np.save(npy_folder + "uni_test", uni_feat_test)
+	# np.save(npy_folder + "ner_train", ner_feat_train)
+	# np.save(npy_folder + "ner_test", ner_feat_test)
+	# np.save(npy_folder + "dep_train", dep_feat_train)
+	# np.save(npy_folder + "dep_test", dep_feat_test)
+	# np.save(npy_folder + "syn_train", syn_feat_train)
+	# np.save(npy_folder + "syn_test", syn_feat_test)
+	# np.save(npy_folder + "clu_train", clu_feat_train)
+	# np.save(npy_folder + "clu_test", clu_feat_test)
+
+	## deserialize
+	# pos_feat_train = np.load(npy_folder + "pos_train.npy")
+	# uni_feat_train = np.load(npy_folder + "uni_train.npy")
+	# ner_feat_train = np.load(npy_folder + "ner_train.npy")
+	# dep_feat_train = np.load(npy_folder + "dep_train.npy")
+	# syn_feat_train = np.load(npy_folder + "syn_train.npy")
+	# clu_feat_train = np.load(npy_folder + "clu_train.npy")
 
 	############## unigram
 	train_path = "./train_split/"
 	test_path = "./test_split/"
 
-	# top_k_unigrams_list = extract_top_k_unigrams(train_path, 5000)
+	# top_k_unigrams_list = extract_top_k_unigrams(train_path, 2000)
 	# unigram_feat_train = createUnigramFeat(train_path, top_k_unigrams_list)
 	# unigram_feat_test = createUnigramFeat(test_path, top_k_unigrams_list)
 	# np.save("./npy_files/unigram_train", unigram_feat_train)
@@ -540,36 +647,44 @@ if __name__ == "__main__":
 	# np.save("./npy_files/bigram_train", bigram_feat_train)
 	# np.save("./npy_files/bigram_test", bigram_feat_test)
 
-	# feat_train = unigram_feat_train
-	feat_train = np.concatenate((pos_feat_train, syn_feat_train), axis = 1)
+
+	############## tf-idf
+	train_file_path = "./data/project_train.txt"
+	tfidf_feat_train = create_tfidf_feat(train_excerpt_list)
+
+	############## Cross valid
+	feat_train = tfidf_feat_train
+	# feat_train = np.concatenate((syn_feat_train, clu_feat_train), axis = 1)
 
 
 	# reg = SVR(C = 5, kernel = 'linear')
 	# reg = LogisticRegression(penalty = 'l1', C = 1, max_iter = 300, solver = 'liblinear', multi_class = 'ovr') 
 
 	# reg = BayesianRidge()
-	reg = BayesianRidge(normalize = True)
+	# reg = BayesianRidge(normalize = True)
+	reg = SVR(C = 10, kernel = 'rbf')
 
 	scores = []
 	total_num = 461
 	train_num = 231
-	for _ in range(5):
-		train_idx = sample(range(total_num), train_num)
-		X_train = [feat_train[i] for i in range(total_num) if i in train_idx]
-		y_train = [train_score_list[i] for i in range(total_num) if i in train_idx]
-		X_valid = [feat_train[i] for i in range(total_num) if i not in train_idx]
-		y_valid = [train_score_list[i] for i in range(total_num) if i not in train_idx]
-		reg.fit(X_train, y_train)
-		estimate = reg.predict(X_valid)
-		scores.append(compute_spearman_correlation(y_valid, estimate))
-		reg.fit(X_valid, y_valid)
-		estimate = reg.predict(X_train)
-		scores.append(compute_spearman_correlation(y_train, estimate))
+	for _ in range(40):
+		for _ in range(5):
+			train_idx = sample(range(total_num), train_num)
+			X_train = [feat_train[i] for i in range(total_num) if i in train_idx]
+			y_train = [train_score_list[i] for i in range(total_num) if i in train_idx]
+			X_valid = [feat_train[i] for i in range(total_num) if i not in train_idx]
+			y_valid = [train_score_list[i] for i in range(total_num) if i not in train_idx]
+			reg.fit(X_train, y_train)
+			estimate = reg.predict(X_valid)
+			scores.append(compute_spearman_correlation(y_valid, estimate))
+			reg.fit(X_valid, y_valid)
+			estimate = reg.predict(X_train)
+			scores.append(compute_spearman_correlation(y_train, estimate))
 
 	print "Mean: ", np.mean(scores)
-	print "Max:  ", max(scores)
-	print "Min:  ", min(scores)
-	print scores
+	# print "Max:  ", max(scores)
+	# print "Min:  ", min(scores)
+	# print scores
 
 
 
