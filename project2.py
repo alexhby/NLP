@@ -562,8 +562,76 @@ def create_tfidf_feat(excerpt_list):
 	return matrix
 
 
+####################### mi
 
-## def get_tfidf_vector(excerpt_list, k)
+def get_word_probs(sample):
+	d = get_tf(sample)	# get tf_dict
+	total = sum(d.itervalues())
+	for word in d:
+		d[word] = float(d[word]) / total
+	return d
+
+## Consider only words that appear at least 5 times in the corpus.
+def get_word_general_probs(corpus):
+	d = get_tf(corpus)	# get tf_dict
+	total = sum(d.itervalues())
+	for word in d.keys():
+		if d[word] >= 5:
+			d[word] = float(d[word]) / total
+		else:
+			del d[word]
+	return d
+
+def get_mi(sample, corpus):
+	d = get_word_probs(sample)
+	corpus_dict = get_word_general_probs(corpus)
+	for word in d.keys():
+		if word in corpus_dict:
+			d[word] = np.log(d[word] / corpus_dict[word])
+		else:
+			del d[word]
+	return d
+
+## sample: a list of standardized excerpts
+## corpus: a list of standardized excerpts
+def get_mi_topk(sample, corpus, k):
+	d = get_mi(sample, corpus)
+	lst = sorted(d.items(), key=operator.itemgetter(1), reverse=True)
+	return lst[0:k]
+
+def vectorize_mi(feature_space, word_probs, sample):
+	mi_dict = {}
+	cond_probs = get_word_probs(sample)
+	for word in cond_probs:
+		if word in word_probs:
+			mi_dict[word] = np.log(cond_probs[word] / word_probs[word])
+	vector = [0] * len(feature_space)
+	for word in feature_space:
+		if word in mi_dict:
+			vector[feature_space[word]] = mi_dict[word]
+	return vector
+
+## create the feature matrix
+def create_mi_feat(excerpt_list):
+	corpus = []
+	for excerpt in excerpt_list:
+		corpus.append(tokenize_excerpt(excerpt))
+	word_probs = get_word_general_probs(corpus)
+
+	corpus_idf_dict = load_idf(corpus)
+	corpus_tf_dict = get_tf(corpus)
+	corpus_tfidf_list = get_tfidf_weights_topk(corpus_tf_dict, corpus_idf_dict, 1000)
+	corpus_wordlist = []
+	for item in corpus_tfidf_list:
+		corpus_wordlist.append(item[0])
+
+	matrix = []
+	for excerpt in excerpt_list:
+		sample = []
+		for sent in sent_tokenize(excerpt):
+			sample.append(word_tokenize(sent))
+		matrix.append(vectorize_mi(create_feature_space(corpus_wordlist), word_probs, sample))
+	return matrix
 
 ###########################################################################
 
@@ -650,10 +718,10 @@ if __name__ == "__main__":
 
 	############## tf-idf
 	train_file_path = "./data/project_train.txt"
-	tfidf_feat_train = create_tfidf_feat(train_excerpt_list)
-
+	#tfidf_feat_train = create_tfidf_feat(train_excerpt_list)
+	mi_feat_train = create_mi_feat(train_excerpt_list)
 	############## Cross valid
-	feat_train = tfidf_feat_train
+	feat_train = mi_feat_train
 	# feat_train = np.concatenate((syn_feat_train, clu_feat_train), axis = 1)
 
 
