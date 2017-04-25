@@ -638,7 +638,9 @@ def create_mi_feat(excerpt_list):
 if __name__ == "__main__":
 	train_xml_path  = "./train_xml/"
 	test_xml_path   = "./test_xml/"
-	brown_file_path = "./brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
+
+	#brown_file_path = "./brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
+	brown_file_path = "./brown-new.txt"
 
 	train_excerpt_list = load_excerpts("./data/project_train.txt")
 	train_score_list = load_train_score("./data/project_train_scores.txt")
@@ -662,19 +664,19 @@ if __name__ == "__main__":
 	# 	ptb_google_mapping[ptb] = uni
 	# universal_tag_list = sorted(list(set(ptb_google_mapping.values())))
 
-	pos_tag_list = extract_pos_tags(train_xml_path)
+	#pos_tag_list = extract_pos_tags(train_xml_path)
 	# entity_list = extract_ner_tags(train_xml_path)
 	# dependency_list = extract_dependencies(train_xml_path)
 	# rules_list = extract_prod_rules(train_xml_path)
-	cluster_code_list = generate_cluster_codes(brown_file_path)
-	word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
+	# cluster_code_list = generate_cluster_codes(brown_file_path)
+	# word_cluster_mapping = generate_word_cluster_mapping(brown_file_path)
 
-	pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
+	# pos_feat_train = createPOSFeat(train_xml_path, pos_tag_list)
 	# uni_feat_train = createUniversalPOSFeat(pos_feat_train, pos_tag_list, ptb_google_mapping, universal_tag_list)
 	# ner_feat_train = createNERFeat(train_xml_path, entity_list)
 	# dep_feat_train = createDependencyFeat(train_xml_path, dependency_list)
 	# syn_feat_train = createSyntaticProductionFeat(train_xml_path, rules_list)
-	clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
+	# clu_feat_train = createBrownClusterFeat(train_xml_path, cluster_code_list, word_cluster_mapping)
 
 	npy_folder = "./npy_files/"
 	## serilize
@@ -692,12 +694,12 @@ if __name__ == "__main__":
 	# np.save(npy_folder + "clu_test", clu_feat_test)
 
 	## deserialize
-	# pos_feat_train = np.load(npy_folder + "pos_train.npy")
+	pos_feat_train = np.load(npy_folder + "pos_train.npy")
 	# uni_feat_train = np.load(npy_folder + "uni_train.npy")
 	# ner_feat_train = np.load(npy_folder + "ner_train.npy")
 	# dep_feat_train = np.load(npy_folder + "dep_train.npy")
 	# syn_feat_train = np.load(npy_folder + "syn_train.npy")
-	# clu_feat_train = np.load(npy_folder + "clu_train.npy")
+	clu_feat_train = np.load(npy_folder + "clu_train.npy")
 
 	############## unigram
 	train_path = "./train_split/"
@@ -726,10 +728,10 @@ if __name__ == "__main__":
 	feat_train = np.concatenate((pos_feat_train, clu_feat_train), axis = 1)
 
 	#################### set up test feature
-	pos_feat_test = createPOSFeat(test_xml_path, pos_tag_list)
-	clu_feat_test = createBrownClusterFeat(test_xml_path, cluster_code_list, word_cluster_mapping)
+	# pos_feat_test = createPOSFeat(test_xml_path, pos_tag_list)
+	# clu_feat_test = createBrownClusterFeat(test_xml_path, cluster_code_list, word_cluster_mapping)
 
-	feat_test = np.concatenate((pos_feat_test, clu_feat_test), axis = 1)
+	# feat_test = np.concatenate((pos_feat_test, clu_feat_test), axis = 1)
 
 	############### cross valid
 	# reg = SVR(C = 5, kernel = 'linear')
@@ -739,33 +741,33 @@ if __name__ == "__main__":
 	# reg = BayesianRidge(normalize = True)
 	reg = SVR(C = 10, kernel = 'rbf')
 
-	# scores = []
-	# total_num = 461
-	# train_num = 231
-	# for _ in range(40):
-	# 	for _ in range(5):
-	# 		train_idx = sample(range(total_num), train_num)
-	# 		X_train = [feat_train[i] for i in range(total_num) if i in train_idx]
-	# 		y_train = [train_score_list[i] for i in range(total_num) if i in train_idx]
-	# 		X_valid = [feat_train[i] for i in range(total_num) if i not in train_idx]
-	# 		y_valid = [train_score_list[i] for i in range(total_num) if i not in train_idx]
-	# 		reg.fit(X_train, y_train)
-	# 		estimate = reg.predict(X_valid)
-	# 		scores.append(compute_spearman_correlation(y_valid, estimate))
-	# 		reg.fit(X_valid, y_valid)
-	# 		estimate = reg.predict(X_train)
-	# 		scores.append(compute_spearman_correlation(y_train, estimate))
+	scores = []
+	total_num = 461
+	train_num = 231
+	for _ in range(40):
+		for _ in range(5):
+			train_idx = sample(range(total_num), train_num)
+			X_train = [feat_train[i] for i in range(total_num) if i in train_idx]
+			y_train = [train_score_list[i] for i in range(total_num) if i in train_idx]
+			X_valid = [feat_train[i] for i in range(total_num) if i not in train_idx]
+			y_valid = [train_score_list[i] for i in range(total_num) if i not in train_idx]
+			reg.fit(X_train, y_train)
+			estimate = reg.predict(X_valid)
+			scores.append(compute_spearman_correlation(y_valid, estimate))
+			reg.fit(X_valid, y_valid)
+			estimate = reg.predict(X_train)
+			scores.append(compute_spearman_correlation(y_train, estimate))
 
-	# print "Mean: ", np.mean(scores)
+	print "Mean: ", np.mean(scores)
 
 	# print "Max:  ", max(scores)
 	# print "Min:  ", min(scores)
 	# print scores
 
 	############### for submission
-	reg.fit(feat_train, train_score_list)
-	estimate = reg.predict(feat_test)
-	f = open("test.txt", 'w')
-	for num in estimate:
-		f.write(str(num) + '\n')
-	f.close()
+	# reg.fit(feat_train, train_score_list)
+	# estimate = reg.predict(feat_test)
+	# f = open("test.txt", 'w')
+	# for num in estimate:
+	# 	f.write(str(num) + '\n')
+	# f.close()
